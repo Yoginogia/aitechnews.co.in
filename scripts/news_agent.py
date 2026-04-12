@@ -18,7 +18,7 @@ import time
 # CONFIGURATION
 # ============================================================
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent"
+GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
 
 ARTICLES_DIR = Path("articles")
 ARTICLES_DIR.mkdir(exist_ok=True)
