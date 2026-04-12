@@ -1,4 +1,4 @@
-name: AITechNews Daily Article Writer (Gemini - Free)
+name: AITechNews Daily Article Writer (Groq - Free)
 
 on:
   schedule:
@@ -32,9 +32,9 @@ jobs:
         run: |
           pip install feedparser requests
 
-      - name: AI Agent chalao (Gemini)
+      - name: AI Agent chalao (Groq)
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           ARTICLES_COUNT: ${{ github.event.inputs.articles_count || '3' }}
         run: |
           python scripts/news_agent.py
