@@ -1,1 +1,47 @@
 
+name: AITechNews Daily Article Writer (Gemini - Free)
+
+on:
+  schedule:
+    # Roz 7:00 AM IST = 1:30 AM UTC
+    - cron: '30 1 * * *'
+  workflow_dispatch:
+    inputs:
+      articles_count:
+        description: 'Kitne articles likhne hain? (1-5)'
+        required: false
+        default: '3'
+
+jobs:
+  write-articles:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Python setup
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Dependencies install karo
+        run: |
+          pip install feedparser requests
+
+      - name: AI Agent chalao (Gemini)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ARTICLES_COUNT: ${{ github.event.inputs.articles_count || '3' }}
+        run: |
+          python scripts/news_agent.py
+
+      - name: Articles GitHub pe push karo
+        run: |
+          git config user.name "AITechNews Bot"
+          git config user.email "bot@aitechnews.co.in"
+          git add articles/
+          git diff --staged --quiet || git commit -m "🤖 Daily articles - $(date +'%Y-%m-%d')"
+          git push
