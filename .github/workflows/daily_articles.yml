@@ -35,6 +35,7 @@ jobs:
       - name: AI Agent chalao (Groq)
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          AITECHINDIA_TOKEN: ${{ secrets.AITECHINDIA_TOKEN }}  # ← ADD THIS LINE
           ARTICLES_COUNT: ${{ github.event.inputs.articles_count || '3' }}
         run: |
           python scripts/publisher.py
