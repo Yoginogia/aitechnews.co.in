@@ -1,13 +1,29 @@
 #!/usr/bin/env python3
-import os, json, feedparser, requests, re, time, base64
+"""
+AITechNews Publisher
+Simplified version for publishing AI-generated articles to GitHub
+"""
+
+import os
+import json
+import feedparser
+import requests
+import re
+import time
+import base64
 from datetime import datetime, timezone
+from typing import Optional
 
-GROQ_KEY = os.environ.get("GROQ_API_KEY", "")
-GH_TOKEN = os.environ.get("AITECHINDIA_TOKEN", "")
-REPO = "Yoginogia/aitechindia"
-PATH = "src/content/blog"
 
-RSS = [
+# =============================================================================
+# CONFIGURATION
+# =============================================================================
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
+GITHUB_TOKEN = os.environ.get("AITECHINDIA_TOKEN", "")
+GITHUB_REPO = "Yoginogia/aitechindia"
+CONTENT_PATH = "src/content/blog"
+
+RSS_FEEDS = [
     "https://techcrunch.com/category/artificial-intelligence/feed/",
     "https://venturebeat.com/ai/feed/",
     "https://blog.google/technology/ai/rss/",
@@ -15,85 +31,169 @@ RSS = [
     "https://huggingface.co/blog/feed.xml",
 ]
 
-IMAGES = [
+UNSPLASH_IMAGES = [
     "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80",
     "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80",
     "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=800&q=80",
 ]
 
-def fetch():
+
+def fetch_news() -> list[dict]:
+    """Fetch news articles from RSS feeds."""
     news = []
-    for url in RSS:
+    
+    for url in RSS_FEEDS:
         try:
-            for e in feedparser.parse(url).entries[:4]:
-                t = e.get("title","").strip()
-                s = re.sub(r'<[^>]+>','',e.get("summary",e.get("description","")).strip())[:300]
-                if t and len(t)>20:
-                    news.append({"title":t,"summary":s,"link":e.get("link","")})
-        except: pass
-    print(f"Fetched: {len(news)}")
+            feed = feedparser.parse(url)
+            for entry in feed.entries[:4]:
+                title = entry.get("title", "").strip()
+                summary_raw = entry.get("summary", entry.get("description", ""))
+                summary = re.sub(r'<[^>]+>', '', summary_raw).strip()[:300]
+                
+                if title and len(title) > 20:
+                    news.append({
+                        "title": title,
+                        "summary": summary,
+                        "link": entry.get("link", "")
+                    })
+        except Exception as e:
+            print(f"  ✗ Error fetching {url}: {e}")
+    
+    print(f"Fetched: {len(news)} articles")
     return news
 
-def groq(prompt, tokens=1000):
-    r = requests.post("https://api.groq.com/openai/v1/chat/completions",
-        headers={"Authorization":f"Bearer {GROQ_KEY}","Content-Type":"application/json"},
-        json={"model":"llama-3.3-70b-versatile","messages":[{"role":"user","content":prompt}],"max_tokens":tokens},
-        timeout=60)
-    return r.json()["choices"][0]["message"]["content"]
 
-def push(filename, content):
-    url = f"https://api.github.com/repos/{REPO}/contents/{PATH}/{filename}"
-    h = {"Authorization":f"token {GH_TOKEN}","Accept":"application/vnd.github.v3+json"}
+def call_groq(prompt: str, max_tokens: int = 1000) -> str:
+    """Make API call to Groq for text generation."""
+    response = requests.post(
+        "https://api.groq.com/openai/v1/chat/completions",
+        headers={
+            "Authorization": f"Bearer {GROQ_API_KEY}",
+            "Content-Type": "application/json"
+        },
+        json={
+            "model": "llama-3.3-70b-versatile",
+            "messages": [{"role": "user", "content": prompt}],
+            "max_tokens": max_tokens
+        },
+        timeout=60
+    )
+    return response.json()["choices"][0]["message"]["content"]
+
+
+def parse_json_response(response_text: str) -> Optional[dict]:
+    """Extract and parse JSON from response text."""
+    try:
+        clean = re.sub(r'```json|```', '', response_text).strip()
+        start_idx = clean.find('{')
+        end_idx = clean.rfind('}') + 1
+        
+        if start_idx == -1 or end_idx == 0:
+            return None
+            
+        return json.loads(clean[start_idx:end_idx])
+    except Exception:
+        return None
+
+
+def push_to_github(filename: str, content: str) -> bool:
+    """Push markdown file to GitHub repository."""
+    url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{CONTENT_PATH}/{filename}"
+    headers = {
+        "Authorization": f"token {GITHUB_TOKEN}",
+        "Accept": "application/vnd.github.v3+json"
+    }
+    
+    # Check if file exists
     sha = None
-    c = requests.get(url,headers=h)
-    if c.status_code==200: sha=c.json().get("sha")
-    p = {"message":f"Auto: {filename}","content":base64.b64encode(content.encode()).decode(),"branch":"main"}
-    if sha: p["sha"]=sha
-    r = requests.put(url,headers=h,json=p)
-    ok = r.status_code in [200,201]
-    print(f"  {'PUSHED' if ok else 'FAILED'}: {filename} ({r.status_code})")
-    return ok
+    check_response = requests.get(url, headers=headers)
+    if check_response.status_code == 200:
+        sha = check_response.json().get("sha")
+    
+    payload = {
+        "message": f"Auto: {filename}",
+        "content": base64.b64encode(content.encode()).decode(),
+        "branch": "main"
+    }
+    if sha:
+        payload["sha"] = sha
+    
+    put_response = requests.put(url, headers=headers, json=payload)
+    success = put_response.status_code in [200, 201]
+    
+    status = "✓ PUSHED" if success else "✗ FAILED"
+    print(f"  {status}: {filename} ({put_response.status_code})")
+    return success
 
-def main():
-    print("=== AITechNews Publisher ===")
-    news = fetch()
-    if not news: return
 
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    count = int(os.environ.get("ARTICLES_COUNT","3"))
-    published = 0
-
-    for i, item in enumerate(news[:count]):
-        print(f"\nWriting article {i+1}: {item['title'][:50]}")
-        try:
-            resp = groq(f"""Write a 400-word Hinglish tech article for AITechNews.co.in about:
+def generate_article(item: dict) -> Optional[dict]:
+    """Generate article content using Groq."""
+    prompt = f"""Write a 400-word Hinglish tech article for AITechNews.co.in about:
 "{item['title']}"
 Summary: {item['summary']}
 
 Respond ONLY with JSON (no backticks):
-{{"title":"Hinglish title","slug":"url-slug","excerpt":"2 line preview","content":"full article with \\n\\n paragraphs","category":"AI News","readingTime":"3 min read"}}""", 1500)
-            clean = re.sub(r'```json|```','',resp).strip()
-            art = json.loads(clean[clean.find('{'):clean.rfind('}')+1])
-            slug = re.sub(r'[^a-z0-9-]','',art.get("slug","ai-news").lower())[:50]
-            filename = f"{slug}-{today}.md"
-            md = f"""---
-title: "{art['title'].replace('"',"'")}"
+{{"title":"Hinglish title","slug":"url-slug","excerpt":"2 line preview","content":"full article with \\n\\n paragraphs","category":"AI News","readingTime":"3 min read"}}"""
+    
+    try:
+        response = call_groq(prompt, max_tokens=1500)
+        return parse_json_response(response)
+    except Exception as e:
+        print(f"  ✗ Generation error: {e}")
+        return None
+
+
+def create_markdown(article: dict, today: str, image_url: str) -> str:
+    """Create markdown content with frontmatter."""
+    return f"""---
+title: "{article['title'].replace('"', "'")}"
 date: {today}
-category: {art.get('category','AI News')}
-excerpt: "{art['excerpt'].replace('"',"'")}"
-image: {IMAGES[i%len(IMAGES)]}
-readingTime: {art.get('readingTime','3 min read')}
+category: {article.get('category', 'AI News')}
+excerpt: "{article['excerpt'].replace('"', "'")}"
+image: {image_url}
+readingTime: {article.get('readingTime', '3 min read')}
 ---
 
-{art['content']}
+{article['content']}
 """
-            if push(filename, md):
-                published += 1
+
+
+def main():
+    """Main entry point for the publisher."""
+    print("=== AITechNews Publisher ===")
+    
+    news = fetch_news()
+    if not news:
+        print("No news found!")
+        return
+
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    article_count = int(os.environ.get("ARTICLES_COUNT", "3"))
+    published_count = 0
+
+    for i, item in enumerate(news[:article_count]):
+        print(f"\nWriting article {i + 1}: {item['title'][:50]}")
+        
+        try:
+            article = generate_article(item)
+            if not article:
+                continue
+            
+            slug = re.sub(r'[^a-z0-9-]', '', article.get("slug", "ai-news").lower())[:50]
+            filename = f"{slug}-{today}.md"
+            
+            image_url = UNSPLASH_IMAGES[i % len(UNSPLASH_IMAGES)]
+            md_content = create_markdown(article, today, image_url)
+            
+            if push_to_github(filename, md_content):
+                published_count += 1
+            
             time.sleep(4)
         except Exception as e:
-            print(f"  Error: {e}")
+            print(f"  ✗ Error: {e}")
 
-    print(f"\nDone! {published} articles published to aitechindia!")
+    print(f"\n✓ Done! {published_count} articles published to aitechindia!")
+
 
 if __name__ == "__main__":
     main()
