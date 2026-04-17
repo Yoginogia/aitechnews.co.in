@@ -158,7 +158,7 @@ def push_to_github(filename: str, content: str) -> bool:
 
 def generate_article(item: dict) -> Optional[dict]:
     """Generate article content using Groq."""
-    prompt = f"""Write a 400-word tech article in Hindi (Devanagari script) mixed with English technical terms for AITechNews.co.in about:
+    prompt = f"""Write a 600-word tech article in Hindi (Devanagari script) mixed with English technical terms for AITechNews.co.in about:
 "{item['title']}"
 Summary: {item['summary']}
 
@@ -227,7 +227,7 @@ def main():
         except Exception as e:
             print(f"  ✗ Error: {e}")
 
-    print(f"\n✓ Done! {published_count} articles published to aitechindia!")
+    print(f"\n✓ Done! {published_count} articles published to aitechnews.co.in!")
 
 
 if __name__ == "__main__":
