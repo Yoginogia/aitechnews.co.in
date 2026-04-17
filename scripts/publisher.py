@@ -158,12 +158,17 @@ def push_to_github(filename: str, content: str) -> bool:
 
 def generate_article(item: dict) -> Optional[dict]:
     """Generate article content using Groq."""
-    prompt = f"""Write a 400-word Hinglish tech article for AITechNews.co.in about:
+    prompt = f"""Write a 400-word tech article in Hindi (Devanagari script) mixed with English technical terms for AITechNews.co.in about:
 "{item['title']}"
 Summary: {item['summary']}
 
+IMPORTANT LANGUAGE RULES:
+1. Write main narrative, headings, and descriptions in Hindi using Devanagari script (e.g., "कृत्रिम बुद्धिमत्ता", "तकनीक", "समाचार")
+2. Keep technical terms, product names, company names in English (e.g., "AI", "Machine Learning", "OpenAI")
+3. DO NOT use Hinglish (Hindi in Latin script). Always use Devanagari for Hindi words
+
 Respond ONLY with JSON (no backticks):
-{{"title":"Hinglish title","slug":"url-slug","excerpt":"2 line preview","content":"full article with \\n\\n paragraphs","category":"AI News","readingTime":"3 min read"}}"""
+{{"title":"Hindi/English mix title","slug":"url-slug","excerpt":"2 line preview in Hindi","content":"full article with Devanagari Hindi + English terms","category":"AI News","readingTime":"3 min read"}}"""
     
     try:
         response = call_groq(prompt, max_tokens=1500)
