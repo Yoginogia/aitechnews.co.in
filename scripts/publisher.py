@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-AITechNews Publisher
-Simplified version for publishing AI-generated articles to GitHub
+AITechNews Publisher (Gemini AI + Pollinations AI Images)
+Generates Devnagri + English articles using Gemini and AI images using Pollinations.
 """
 
 import os
@@ -11,23 +11,32 @@ import requests
 import re
 import time
 import base64
+import urllib.parse
 from datetime import datetime, timezone
 from typing import Optional
 
+try:
+    import google.generativeai as genai
+    HAS_GEMINI = True
+except ImportError:
+    HAS_GEMINI = False
 
 # =============================================================================
 # CONFIGURATION
 # =============================================================================
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 GITHUB_TOKEN = os.environ.get("AITECHINDIA_TOKEN", "")
 GITHUB_REPO = "Yoginogia/aitechindia"
 CONTENT_PATH = "src/content/blog"
+
+if GEMINI_API_KEY and HAS_GEMINI:
+    genai.configure(api_key=GEMINI_API_KEY)
 
 RSS_FEEDS = [
     # Global AI & Tech
     "https://techcrunch.com/category/artificial-intelligence/feed/",
     "https://venturebeat.com/ai/feed/",
-    "https://feeds.arstechnica.com/arstechnica/technology-lab",
     "https://blog.google/technology/ai/rss/",
     "https://openai.com/blog/rss.xml",
     "https://huggingface.co/blog/feed.xml",
@@ -35,33 +44,18 @@ RSS_FEEDS = [
     "https://gadgets.ndtv.com/rss/feeds",
     "https://analyticsindiamag.com/feed/",
     "https://www.91mobiles.com/hub/feed/",
-    # Crypto
-    "https://cointelegraph.com/rss",
 ]
-
-UNSPLASH_IMAGES = [
-    "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80",
-    "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80",
-    "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=800&q=80",
-    "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80",
-    "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c3?w=800&q=80",
-    "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80",
-    "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800&q=80",
-]
-
 
 def fetch_news() -> list[dict]:
     """Fetch news articles from RSS feeds."""
     news = []
-    
     for url in RSS_FEEDS:
         try:
             feed = feedparser.parse(url)
             for entry in feed.entries[:4]:
                 title = entry.get("title", "").strip()
                 summary_raw = entry.get("summary", entry.get("description", ""))
-                summary = re.sub(r'<[^>]+>', '', summary_raw).strip()[:300]
-                
+                summary = re.sub(r'<[^>]+>', '', summary_raw).strip()[:400]
                 if title and len(title) > 20:
                     news.append({
                         "title": title,
@@ -70,13 +64,30 @@ def fetch_news() -> list[dict]:
                     })
         except Exception as e:
             print(f"  ✗ Error fetching {url}: {e}")
-    
-    print(f"Fetched: {len(news)} articles")
+    print(f"Fetched: {len(news)} articles from RSS feeds")
     return news
 
+def parse_json_response(response_text: str) -> Optional[dict]:
+    """Extract and parse JSON from response text."""
+    try:
+        clean = re.sub(r'```json|```', '', response_text).strip()
+        start_idx = clean.find('{')
+        end_idx = clean.rfind('}') + 1
+        return json.loads(clean[start_idx:end_idx])
+    except Exception:
+        return None
 
-def call_groq(prompt: str, max_tokens: int = 1000) -> str:
-    """Make API call to Groq for text generation."""
+def call_ai(prompt: str) -> str:
+    """Make API call to Gemini (primary) or Groq (fallback) for text generation."""
+    if GEMINI_API_KEY and HAS_GEMINI:
+        try:
+            model = genai.GenerativeModel("gemini-1.5-pro")
+            response = model.generate_content(prompt)
+            return response.text
+        except Exception as e:
+            print(f"  [Gemini failed, trying Groq...] {e}")
+    
+    # GROQ FALLBACK
     response = requests.post(
         "https://api.groq.com/openai/v1/chat/completions",
         headers={
@@ -86,27 +97,19 @@ def call_groq(prompt: str, max_tokens: int = 1000) -> str:
         json={
             "model": "llama-3.3-70b-versatile",
             "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": max_tokens
+            "max_tokens": 2000,
+            "temperature": 0.75
         },
         timeout=60
     )
     return response.json()["choices"][0]["message"]["content"]
 
-
-def parse_json_response(response_text: str) -> Optional[dict]:
-    """Extract and parse JSON from response text."""
-    try:
-        clean = re.sub(r'```json|```', '', response_text).strip()
-        start_idx = clean.find('{')
-        end_idx = clean.rfind('}') + 1
-        
-        if start_idx == -1 or end_idx == 0:
-            return None
-            
-        return json.loads(clean[start_idx:end_idx])
-    except Exception:
-        return None
-
+def generate_ai_image_url(title: str) -> str:
+    """Generate an AI image URL using pollinations.ai completely free."""
+    # Create an image prompt based on the article title
+    img_prompt = f"Futuristic technology illustration 8k resolution, cinematic lighting: {title}"
+    encoded = urllib.parse.quote(img_prompt)
+    return f"https://image.pollinations.ai/prompt/{encoded}?width=800&height=450&nologo=true"
 
 def push_to_github(filename: str, content: str) -> bool:
     """Push markdown file to GitHub repository."""
@@ -115,62 +118,53 @@ def push_to_github(filename: str, content: str) -> bool:
         "Authorization": f"token {GITHUB_TOKEN}",
         "Accept": "application/vnd.github.v3+json"
     }
-    
-    # Check if file exists
+
     sha = None
     check_response = requests.get(url, headers=headers)
     if check_response.status_code == 200:
         sha = check_response.json().get("sha")
-    
+        print(f"  ℹ File already exists, updating...")
+
     payload = {
         "message": f"Auto: {filename}",
-        "content": base64.b64encode(content.encode()).decode(),
+        "content": base64.b64encode(content.encode('utf-8')).decode(),
         "branch": "main"
     }
     if sha:
         payload["sha"] = sha
-    
+
     put_response = requests.put(url, headers=headers, json=payload)
     success = put_response.status_code in [200, 201]
-    
     status = "✓ PUSHED" if success else "✗ FAILED"
     print(f"  {status}: {filename} ({put_response.status_code})")
     return success
 
-
 def generate_article(item: dict) -> Optional[dict]:
-    """Generate article content using Groq."""
+    """Generate Devnagri + English article content."""
     prompt = f"""You are AITechIndia's expert Hinglish writer. Write a 500-word engaging tech article.
 
 News Topic: "{item['title']}"
 Context: {item['summary']}
 
-RULES:
-- Mix Hindi (Devanagari script) and English naturally — jaise Indians actually bolte hain
-- Use ## for section headings, **bold** for key terms
-- Emojis headings mein lagao (🔥⚡🚀💡🤖📱)
-- Make it exciting — punchy aur shareable
-- India-specific angle zaroor dalo
-- Article ke end mein readers se ek question karo
+CRITICAL RULES:
+1. MUST MIX Devanagari (हिंदी) and English naturally in the exact same sentence. DO NOT use only roman script! 
+2. Example of required language style: "Apple ने एक नया iPhone launch किया है, जो industry में game changer साबित हो सकता है।" 
+3. Both Headings (##) and text MUST be a mix of English and Devanagari Hindi. 
+4. Headings must have Emojis (🔥⚡🚀💡🤖📱)
+5. Add an India-specific perspective where possible.
 
-Respond ONLY with valid JSON (no backticks, no markdown):
-{{"title":"catchy Hinglish title with emoji under 80 chars","slug":"url-friendly-slug","excerpt":"2-3 line Hinglish preview","content":"full 500 word article with \\n\\n between paragraphs","category":"AI","readingTime":"4 min read"}}"""
-    
+Respond ONLY with valid JSON (no markdown formatting, no backticks, just raw JSON text):
+{{"title":"Catchy Title with emoji (Mix of Hindi in Devnagari & English) under 80 chars","slug":"url-friendly-slug-with-only-english-letters","excerpt":"2-3 line preview (Mix Hindi/Devnagari + English)","content":"Full article text (Mix Hindi/Devnagari + English). Use \\n\\n for paragraphs","category":"AI","readingTime":"4 min read"}}"""
+
     try:
-        response = call_groq(prompt, max_tokens=1500)
+        response = call_ai(prompt)
         return parse_json_response(response)
     except Exception as e:
         print(f"  ✗ Generation error: {e}")
         return None
 
-
 def create_markdown(article: dict, today_formatted: str, image_url: str) -> str:
-    """
-    Create markdown content with properly quoted frontmatter.
-    CRITICAL: All YAML values must be quoted strings.
-    Unquoted `date: 2026-04-17` gets parsed as Date object by gray-matter
-    causing Next.js prerender crash: 'Objects are not valid as React child'
-    """
+    """Create markdown content with properly quoted frontmatter."""
     title = article['title'].replace('"', "'")
     excerpt = article['excerpt'].replace('"', "'")
     category = article.get('category', 'AI')
@@ -188,31 +182,27 @@ readingTime: "{reading_time}"
 {article['content']}
 """
 
-
 def main():
     """Main entry point for the publisher."""
-    print("=" * 50)
-    print("=== AITechNews Publisher (Fixed) ===")
+    print("=" * 55)
+    print("=== AITechNews Publisher (Gemini AI Edition) ===")
     print(f"Run time: {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC")
-    print("=" * 50)
+    print("=" * 55)
 
     news = fetch_news()
     if not news:
         print("No news found!")
         return
 
-    # FIX: Human-readable quoted date string — prevents YAML Date Object bug
     today_formatted = datetime.now(timezone.utc).strftime("%d %B %Y")
     today_slug = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     article_count = int(os.environ.get("ARTICLES_COUNT", "3"))
     published_count = 0
 
-    # Pick varied articles (spread across different RSS sources)
     selected = news[::max(1, len(news) // article_count)][:article_count]
 
     for i, item in enumerate(selected):
         print(f"\n📝 Writing article {i + 1}/{article_count}: {item['title'][:55]}...")
-
         try:
             article = generate_article(item)
             if not article:
@@ -221,22 +211,23 @@ def main():
 
             slug = re.sub(r'[^a-z0-9-]', '', article.get("slug", "ai-news").lower())[:50]
             filename = f"{slug}-{today_slug}.md"
-            image_url = UNSPLASH_IMAGES[i % len(UNSPLASH_IMAGES)]
+            
+            # Use AI generated Image via Pollinations based on title
+            image_url = generate_ai_image_url(article['title'])
 
             md_content = create_markdown(article, today_formatted, image_url)
 
             if push_to_github(filename, md_content):
                 published_count += 1
 
-            time.sleep(5)  # Rate limit protection
+            time.sleep(5)
 
         except Exception as e:
             print(f"  ✗ Error: {e}")
 
-    print(f"\n{'='*50}")
+    print(f"\n{'='*55}")
     print(f"✅ Done! {published_count}/{article_count} articles published!")
-    print(f"{'='*50}")
-
+    print(f"{'='*55}")
 
 if __name__ == "__main__":
     main()
