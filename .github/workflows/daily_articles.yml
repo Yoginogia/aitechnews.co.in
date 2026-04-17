@@ -35,17 +35,9 @@ jobs:
       - name: AI Agent chalao (Groq)
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          AITECHINDIA_TOKEN: ${{ secrets.AITECHINDIA_TOKEN }}  # ← ADD THIS LINE
+          AITECHINDIA_TOKEN: ${{ secrets.AITECHINDIA_TOKEN }}
           ARTICLES_COUNT: ${{ github.event.inputs.articles_count || '3' }}
         run: |
           python scripts/publisher.py
-
-      - name: Articles GitHub pe push karo
-        run: |
-          git config user.name "AITechNews Bot"
-          git config user.email "bot@aitechnews.co.in"
-          git fetch origin main
-          git reset --hard origin/main
-          git add articles/
-          git diff --staged --quiet || git commit -m "🤖 Daily articles - $(date +'%Y-%m-%d')"
-          git push origin main
+          # publisher.py already handles git add, commit, and push internally.
+          # No need for extra git steps here to avoid conflicts.

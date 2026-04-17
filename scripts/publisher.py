@@ -20,8 +20,8 @@ from typing import Optional
 # =============================================================================
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
 GITHUB_TOKEN = os.environ.get("AITECHINDIA_TOKEN", "")
-GITHUB_REPO = "Yoginogia/aitechindia"
-CONTENT_PATH = "src/content/blog"
+GITHUB_REPO = "Yoginogia/aitechnews.co.in"
+CONTENT_PATH = "articles"
 
 RSS_FEEDS = [
     "https://techcrunch.com/category/artificial-intelligence/feed/",
@@ -63,22 +63,52 @@ def fetch_news() -> list[dict]:
     return news
 
 
-def call_groq(prompt: str, max_tokens: int = 1000) -> str:
+def call_groq(prompt: str, max_tokens: int = 1000) -> Optional[str]:
     """Make API call to Groq for text generation."""
-    response = requests.post(
-        "https://api.groq.com/openai/v1/chat/completions",
-        headers={
-            "Authorization": f"Bearer {GROQ_API_KEY}",
-            "Content-Type": "application/json"
-        },
-        json={
-            "model": "llama-3.3-70b-versatile",
-            "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": max_tokens
-        },
-        timeout=60
-    )
-    return response.json()["choices"][0]["message"]["content"]
+    try:
+        response = requests.post(
+            "https://api.groq.com/openai/v1/chat/completions",
+            headers={
+                "Authorization": f"Bearer {GROQ_API_KEY}",
+                "Content-Type": "application/json"
+            },
+            json={
+                "model": "llama-3.3-70b-versatile",
+                "messages": [{"role": "user", "content": prompt}],
+                "max_tokens": max_tokens
+            },
+            timeout=60
+        )
+        
+        response_data = response.json()
+        
+        # Check for API errors
+        if response.status_code != 200:
+            print(f"  ✗ API Error ({response.status_code}): {response_data.get('error', {}).get('message', 'Unknown error')}")
+            return None
+        
+        # Extract content safely
+        choices = response_data.get("choices", [])
+        if not choices:
+            print("  ✗ No choices in API response")
+            return None
+            
+        content = choices[0].get("message", {}).get("content")
+        if not content:
+            print("  ✗ No content in API response")
+            return None
+            
+        return content
+        
+    except requests.exceptions.Timeout:
+        print("  ✗ API request timed out")
+        return None
+    except requests.exceptions.RequestException as e:
+        print(f"  ✗ Request error: {e}")
+        return None
+    except Exception as e:
+        print(f"  ✗ Unexpected error: {e}")
+        return None
 
 
 def parse_json_response(response_text: str) -> Optional[dict]:
