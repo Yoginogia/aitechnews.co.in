@@ -24,17 +24,29 @@ GITHUB_REPO = "Yoginogia/aitechindia"
 CONTENT_PATH = "src/content/blog"
 
 RSS_FEEDS = [
+    # Global AI & Tech
     "https://techcrunch.com/category/artificial-intelligence/feed/",
     "https://venturebeat.com/ai/feed/",
+    "https://feeds.arstechnica.com/arstechnica/technology-lab",
     "https://blog.google/technology/ai/rss/",
     "https://openai.com/blog/rss.xml",
     "https://huggingface.co/blog/feed.xml",
+    # India Tech
+    "https://gadgets.ndtv.com/rss/feeds",
+    "https://analyticsindiamag.com/feed/",
+    "https://www.91mobiles.com/hub/feed/",
+    # Crypto
+    "https://cointelegraph.com/rss",
 ]
 
 UNSPLASH_IMAGES = [
     "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80",
     "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80",
     "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=800&q=80",
+    "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80",
+    "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c3?w=800&q=80",
+    "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80",
+    "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800&q=80",
 ]
 
 
@@ -128,12 +140,21 @@ def push_to_github(filename: str, content: str) -> bool:
 
 def generate_article(item: dict) -> Optional[dict]:
     """Generate article content using Groq."""
-    prompt = f"""Write a 400-word Hinglish tech article for AITechNews.co.in about:
-"{item['title']}"
-Summary: {item['summary']}
+    prompt = f"""You are AITechIndia's expert Hinglish writer. Write a 500-word engaging tech article.
 
-Respond ONLY with JSON (no backticks):
-{{"title":"Hinglish title","slug":"url-slug","excerpt":"2 line preview","content":"full article with \\n\\n paragraphs","category":"AI News","readingTime":"3 min read"}}"""
+News Topic: "{item['title']}"
+Context: {item['summary']}
+
+RULES:
+- Mix Hindi (Devanagari script) and English naturally — jaise Indians actually bolte hain
+- Use ## for section headings, **bold** for key terms
+- Emojis headings mein lagao (🔥⚡🚀💡🤖📱)
+- Make it exciting — punchy aur shareable
+- India-specific angle zaroor dalo
+- Article ke end mein readers se ek question karo
+
+Respond ONLY with valid JSON (no backticks, no markdown):
+{{"title":"catchy Hinglish title with emoji under 80 chars","slug":"url-friendly-slug","excerpt":"2-3 line Hinglish preview","content":"full 500 word article with \\n\\n between paragraphs","category":"AI","readingTime":"4 min read"}}"""
     
     try:
         response = call_groq(prompt, max_tokens=1500)
@@ -143,15 +164,25 @@ Respond ONLY with JSON (no backticks):
         return None
 
 
-def create_markdown(article: dict, today: str, image_url: str) -> str:
-    """Create markdown content with frontmatter."""
+def create_markdown(article: dict, today_formatted: str, image_url: str) -> str:
+    """
+    Create markdown content with properly quoted frontmatter.
+    CRITICAL: All YAML values must be quoted strings.
+    Unquoted `date: 2026-04-17` gets parsed as Date object by gray-matter
+    causing Next.js prerender crash: 'Objects are not valid as React child'
+    """
+    title = article['title'].replace('"', "'")
+    excerpt = article['excerpt'].replace('"', "'")
+    category = article.get('category', 'AI')
+    reading_time = article.get('readingTime', '4 min read')
+
     return f"""---
-title: "{article['title'].replace('"', "'")}"
-date: {today}
-category: {article.get('category', 'AI News')}
-excerpt: "{article['excerpt'].replace('"', "'")}"
-image: {image_url}
-readingTime: {article.get('readingTime', '3 min read')}
+title: "{title}"
+date: "{today_formatted}"
+category: "{category}"
+excerpt: "{excerpt}"
+image: "{image_url}"
+readingTime: "{reading_time}"
 ---
 
 {article['content']}
@@ -160,39 +191,51 @@ readingTime: {article.get('readingTime', '3 min read')}
 
 def main():
     """Main entry point for the publisher."""
-    print("=== AITechNews Publisher ===")
-    
+    print("=" * 50)
+    print("=== AITechNews Publisher (Fixed) ===")
+    print(f"Run time: {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC")
+    print("=" * 50)
+
     news = fetch_news()
     if not news:
         print("No news found!")
         return
 
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    # FIX: Human-readable quoted date string — prevents YAML Date Object bug
+    today_formatted = datetime.now(timezone.utc).strftime("%d %B %Y")
+    today_slug = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     article_count = int(os.environ.get("ARTICLES_COUNT", "3"))
     published_count = 0
 
-    for i, item in enumerate(news[:article_count]):
-        print(f"\nWriting article {i + 1}: {item['title'][:50]}")
-        
+    # Pick varied articles (spread across different RSS sources)
+    selected = news[::max(1, len(news) // article_count)][:article_count]
+
+    for i, item in enumerate(selected):
+        print(f"\n📝 Writing article {i + 1}/{article_count}: {item['title'][:55]}...")
+
         try:
             article = generate_article(item)
             if not article:
+                print("  ✗ Skipping - generation failed")
                 continue
-            
+
             slug = re.sub(r'[^a-z0-9-]', '', article.get("slug", "ai-news").lower())[:50]
-            filename = f"{slug}-{today}.md"
-            
+            filename = f"{slug}-{today_slug}.md"
             image_url = UNSPLASH_IMAGES[i % len(UNSPLASH_IMAGES)]
-            md_content = create_markdown(article, today, image_url)
-            
+
+            md_content = create_markdown(article, today_formatted, image_url)
+
             if push_to_github(filename, md_content):
                 published_count += 1
-            
-            time.sleep(4)
+
+            time.sleep(5)  # Rate limit protection
+
         except Exception as e:
             print(f"  ✗ Error: {e}")
 
-    print(f"\n✓ Done! {published_count} articles published to aitechindia!")
+    print(f"\n{'='*50}")
+    print(f"✅ Done! {published_count}/{article_count} articles published!")
+    print(f"{'='*50}")
 
 
 if __name__ == "__main__":
