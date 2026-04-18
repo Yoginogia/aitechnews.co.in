@@ -212,8 +212,9 @@ def main():
             slug = re.sub(r'[^a-z0-9-]', '', article.get("slug", "ai-news").lower())[:50]
             filename = f"{slug}-{today_slug}.md"
             
-            # Use AI generated Image via Pollinations based on title
-            image_url = generate_ai_image_url(article['title'])
+            # Use original English title from RSS for AI Image generation (cleaner prompt)
+            clean_title = re.sub(r'[^\w\s-]', '', item['title']) # remove special characters
+            image_url = generate_ai_image_url(clean_title)
 
             md_content = create_markdown(article, today_formatted, image_url)
 
