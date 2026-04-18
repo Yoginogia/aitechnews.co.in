@@ -32,10 +32,11 @@ jobs:
         run: |
           pip install feedparser requests google-generativeai
 
-      - name: AI Agent chalao (Gemini & Groq)
+      - name: AI Agent chalao (Gemini & HuggingFace)
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
           AITECHINDIA_TOKEN: ${{ secrets.AITECHINDIA_TOKEN }}
           ARTICLES_COUNT: ${{ github.event.inputs.articles_count || '3' }}
         run: |

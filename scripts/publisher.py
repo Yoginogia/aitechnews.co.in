@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-AITechNews Publisher (Gemini AI + Pollinations AI Images)
-Generates Devnagri + English articles using Gemini and AI images using Pollinations.
+AITechNews Publisher (Gemini/Groq + Hugging Face Stable Diffusion)
+Generates Devnagri + English articles and uploads high-quality HF images directly to aitechindia.
 """
 
 import os
@@ -11,7 +11,6 @@ import requests
 import re
 import time
 import base64
-import urllib.parse
 from datetime import datetime, timezone
 from typing import Optional
 
@@ -27,27 +26,26 @@ except ImportError:
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 GITHUB_TOKEN = os.environ.get("AITECHINDIA_TOKEN", "")
+HF_TOKEN = os.environ.get("HF_TOKEN", "")
+
 GITHUB_REPO = "Yoginogia/aitechindia"
 CONTENT_PATH = "src/content/blog"
+IMAGE_PATH = "public/images/blog"
 
 if GEMINI_API_KEY and HAS_GEMINI:
     genai.configure(api_key=GEMINI_API_KEY)
 
 RSS_FEEDS = [
-    # Global AI & Tech
     "https://techcrunch.com/category/artificial-intelligence/feed/",
     "https://venturebeat.com/ai/feed/",
     "https://blog.google/technology/ai/rss/",
     "https://openai.com/blog/rss.xml",
-    "https://huggingface.co/blog/feed.xml",
-    # India Tech
     "https://gadgets.ndtv.com/rss/feeds",
     "https://analyticsindiamag.com/feed/",
     "https://www.91mobiles.com/hub/feed/",
 ]
 
 def fetch_news() -> list[dict]:
-    """Fetch news articles from RSS feeds."""
     news = []
     for url in RSS_FEEDS:
         try:
@@ -64,11 +62,9 @@ def fetch_news() -> list[dict]:
                     })
         except Exception as e:
             print(f"  ✗ Error fetching {url}: {e}")
-    print(f"Fetched: {len(news)} articles from RSS feeds")
     return news
 
 def parse_json_response(response_text: str) -> Optional[dict]:
-    """Extract and parse JSON from response text."""
     try:
         clean = re.sub(r'```json|```', '', response_text).strip()
         start_idx = clean.find('{')
@@ -78,7 +74,6 @@ def parse_json_response(response_text: str) -> Optional[dict]:
         return None
 
 def call_ai(prompt: str) -> str:
-    """Make API call to Gemini (primary) or Groq (fallback) for text generation."""
     if GEMINI_API_KEY and HAS_GEMINI:
         try:
             model = genai.GenerativeModel("gemini-1.5-pro")
@@ -87,7 +82,6 @@ def call_ai(prompt: str) -> str:
         except Exception as e:
             print(f"  [Gemini failed, trying Groq...] {e}")
     
-    # GROQ FALLBACK
     response = requests.post(
         "https://api.groq.com/openai/v1/chat/completions",
         headers={
@@ -104,16 +98,39 @@ def call_ai(prompt: str) -> str:
     )
     return response.json()["choices"][0]["message"]["content"]
 
-def generate_ai_image_url(title: str) -> str:
-    """Generate an AI image URL using pollinations.ai completely free."""
-    # Create an image prompt based on the article title
-    img_prompt = f"Futuristic technology illustration 8k resolution, cinematic lighting: {title}"
-    encoded = urllib.parse.quote(img_prompt)
-    return f"https://image.pollinations.ai/prompt/{encoded}?width=800&height=450&nologo=true"
+def generate_and_upload_hf_image(title: str, slug: str) -> str:
+    """Generate image via HuggingFace and upload directly to aitechindia repository."""
+    if not HF_TOKEN:
+        print("  ✗ HF_TOKEN missing! Falling back to pollinations.")
+        encoded = title.replace(" ", "%20")
+        return f"https://image.pollinations.ai/prompt/hyperrealistic%20high-tech%20{encoded}?width=800&height=450&nologo=true"
+    
+    # 1. Generate Image Bytes via Free HuggingFace Inference API (Stable Diffusion XL)
+    print("  Generating HF Image via SDXL...")
+    API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0"
+    headers = {"Authorization": f"Bearer {HF_TOKEN}"}
+    prompt = f"hyperrealistic, extremely detailed, cinematic lighting, futuristic technology, 8k resolution, masterpiece, glowing neon aesthetics, photorealistic: {title}"
+    
+    response = requests.post(API_URL, headers=headers, json={"inputs": prompt})
+    if response.status_code != 200 or len(response.content) < 1000:
+        print("  ✗ HF Image generation failed, falling back to Pollinations.")
+        encoded = title.replace(" ", "%20")
+        return f"https://image.pollinations.ai/prompt/hyperrealistic%20high-tech%20{encoded}?width=800&height=450&nologo=true"
+    
+    # 2. Push Image to aitechindia via GitHub API
+    image_filename = f"{slug}.jpg"
+    upload_success = push_file_to_github(f"{IMAGE_PATH}/{image_filename}", response.content, is_binary=True)
+    
+    if upload_success:
+        print(f"  ✓ High-quality image uploaded to {IMAGE_PATH}/{image_filename}")
+        return f"/images/blog/{image_filename}"
+    else:
+        print(f"  ✗ Failed to upload image to Github. Falling back to pollinations.")
+        return f"https://image.pollinations.ai/prompt/hyperrealistic%20high-tech%20{title.replace(' ', '%20')}?width=800&height=450&nologo=true"
 
-def push_to_github(filename: str, content: str) -> bool:
-    """Push markdown file to GitHub repository."""
-    url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{CONTENT_PATH}/{filename}"
+def push_file_to_github(filepath: str, content, is_binary: bool = False) -> bool:
+    """Push any file (text or binary) to GitHub repository."""
+    url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{filepath}"
     headers = {
         "Authorization": f"token {GITHUB_TOKEN}",
         "Accept": "application/vnd.github.v3+json"
@@ -123,31 +140,31 @@ def push_to_github(filename: str, content: str) -> bool:
     check_response = requests.get(url, headers=headers)
     if check_response.status_code == 200:
         sha = check_response.json().get("sha")
-        print(f"  ℹ File already exists, updating...")
+
+    if is_binary:
+        encoded_content = base64.b64encode(content).decode('ascii')
+    else:
+        encoded_content = base64.b64encode(content.encode('utf-8')).decode('ascii')
 
     payload = {
-        "message": f"Auto: {filename}",
-        "content": base64.b64encode(content.encode('utf-8')).decode(),
+        "message": f"Auto: Create/Update {filepath.split('/')[-1]}",
+        "content": encoded_content,
         "branch": "main"
     }
     if sha:
         payload["sha"] = sha
 
     put_response = requests.put(url, headers=headers, json=payload)
-    success = put_response.status_code in [200, 201]
-    status = "✓ PUSHED" if success else "✗ FAILED"
-    print(f"  {status}: {filename} ({put_response.status_code})")
-    return success
+    return put_response.status_code in [200, 201]
 
 def generate_article(item: dict) -> Optional[dict]:
-    """Generate Devnagri + English article content."""
     prompt = f"""You are AITechIndia's expert Hinglish writer. Write a 500-word engaging tech article.
 
 News Topic: "{item['title']}"
 Context: {item['summary']}
 
 CRITICAL RULES:
-1. MUST MIX Devanagari (हिंदी) and English naturally in the exact same sentence. DO NOT use only roman script! 
+1. MUST MIX Devanagari (हिंदी) and English naturally. Do NOT use only english letters for Hindi! 
 2. Example of required language style: "Apple ने एक नया iPhone launch किया है, जो industry में game changer साबित हो सकता है।" 
 3. Both Headings (##) and text MUST be a mix of English and Devanagari Hindi. 
 4. Headings must have Emojis (🔥⚡🚀💡🤖📱)
@@ -160,11 +177,10 @@ Respond ONLY with valid JSON (no markdown formatting, no backticks, just raw JSO
         response = call_ai(prompt)
         return parse_json_response(response)
     except Exception as e:
-        print(f"  ✗ Generation error: {e}")
+        print(f"  ✗ Text Generation error: {e}")
         return None
 
 def create_markdown(article: dict, today_formatted: str, image_url: str) -> str:
-    """Create markdown content with properly quoted frontmatter."""
     title = article['title'].replace('"', "'")
     excerpt = article['excerpt'].replace('"', "'")
     category = article.get('category', 'AI')
@@ -183,11 +199,10 @@ readingTime: "{reading_time}"
 """
 
 def main():
-    """Main entry point for the publisher."""
-    print("=" * 55)
-    print("=== AITechNews Publisher (Gemini AI Edition) ===")
+    print("=" * 60)
+    print("=== AITechNews Publisher (HuggingFace Integration) ===")
     print(f"Run time: {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC")
-    print("=" * 55)
+    print("=" * 60)
 
     news = fetch_news()
     if not news:
@@ -204,6 +219,7 @@ def main():
     for i, item in enumerate(selected):
         print(f"\n📝 Writing article {i + 1}/{article_count}: {item['title'][:55]}...")
         try:
+            # 1. Text Generation
             article = generate_article(item)
             if not article:
                 print("  ✗ Skipping - generation failed")
@@ -212,23 +228,24 @@ def main():
             slug = re.sub(r'[^a-z0-9-]', '', article.get("slug", "ai-news").lower())[:50]
             filename = f"{slug}-{today_slug}.md"
             
-            # Use original English title from RSS for AI Image generation (cleaner prompt)
-            clean_title = re.sub(r'[^\w\s-]', '', item['title']) # remove special characters
-            image_url = generate_ai_image_url(clean_title)
+            # 2. Image Generation & Upload
+            clean_title = re.sub(r'[^\w\s-]', '', item['title']) # pure English title
+            image_url = generate_and_upload_hf_image(clean_title, slug)
 
+            # 3. Save Markdown
             md_content = create_markdown(article, today_formatted, image_url)
-
-            if push_to_github(filename, md_content):
+            if push_file_to_github(f"{CONTENT_PATH}/{filename}", md_content, is_binary=False):
                 published_count += 1
+                print(f"  ✓ Markdown {filename} pushed to repo.")
 
             time.sleep(5)
 
         except Exception as e:
             print(f"  ✗ Error: {e}")
 
-    print(f"\n{'='*55}")
+    print(f"\n{'='*60}")
     print(f"✅ Done! {published_count}/{article_count} articles published!")
-    print(f"{'='*55}")
+    print(f"{'='*60}")
 
 if __name__ == "__main__":
     main()
