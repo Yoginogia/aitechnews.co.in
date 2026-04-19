@@ -1,14 +1,15 @@
-name: AITechNews Daily Article Writer (Groq - Free)
+name: AITechNews Daily Article Writer v3.0
 
 on:
   schedule:
-    - cron: '30 1 * * *'
+    # 00:00 UTC = 5:30 AM IST - Articles will be live before 7 AM IST
+    - cron: '0 0 * * *'
   workflow_dispatch:
     inputs:
-      articles_count:
-        description: 'Kitne articles likhne hain? (1-5)'
+      category:
+        description: 'Specific category chalao (AI/Deals/Software/Crypto/ALL)'
         required: false
-        default: '3'
+        default: 'ALL'
 
 jobs:
   write-articles:
@@ -32,7 +33,7 @@ jobs:
         run: |
           pip install feedparser requests google-generativeai tweepy
 
-      - name: AI Agent chalao (Gemini & HuggingFace)
+      - name: AI Agent chalao - Multi-Category Publisher
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -44,6 +45,7 @@ jobs:
           TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
           TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
           TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
-          ARTICLES_COUNT: ${{ github.event.inputs.articles_count || '3' }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
         run: |
           python scripts/publisher.py
