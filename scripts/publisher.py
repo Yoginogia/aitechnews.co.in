@@ -5,7 +5,7 @@ AITechNews Publisher v4.0 - ULTRA UPDATE
 - FIX 2: Casual Hinglish (natural mix, NOT shuddh Hindi)
 - NEW: Web Stories auto-generation (AMP format for Google Discover)
 - NEW: Amazon India real deals RSS feeds
-- 10 Articles Daily: AI(5) + Deals(2) + Software(1) + Crypto(2)
+- 12 Articles Daily: AI(5) + Gadgets(2) + Deals(2) + Software(1) + Crypto(2)
 """
 
 import os
@@ -112,6 +112,20 @@ CATEGORY_CONFIG = {
         "image_style": "bitcoin cryptocurrency golden coins, blockchain visualization, financial charts, dark premium background",
         "emoji": "₿",
         "color": "#f59e0b",
+    },
+    "Gadgets": {
+        "count": 2,
+        "feeds": [
+            "https://www.91mobiles.com/hub/category/news/feed/",
+            "https://www.autocarindia.com/rss/news",
+            "https://electrek.co/feed/",
+            "https://gadgets360.com/rss/news",
+            "https://www.techradar.com/rss",
+        ],
+        "hashtags": "#Gadgets #EVIndia #Smartphones #TechNews",
+        "image_style": "futuristic smartphone, electric vehicle car, sleek modern tech, studio lighting, hyperrealistic glowing reflections",
+        "emoji": "📱",
+        "color": "#ec4899",
     },
 }
 
@@ -438,6 +452,7 @@ def generate_article(item: dict, category: str) -> Optional[dict]:
         "Deals": "Amazon/Flipkart ke best tech deal ke baare mein likhein. Actual price, original MRP, discount %, aur product ka link zaroor mention karein.",
         "Software": "Software update ya naye features ke baare mein likhein. Version number aur key changes clearly batayein.",
         "Crypto": "Cryptocurrency market news. Price levels, trend aur India ke investors ke liye kya matlab.",
+        "Gadgets": "Naye smartphone launches, laptops, ya EV (Electric Vehicles) cars in India ke baare mein likhein. Key specs, features, battery, aur expected price zaroor highlight karein.",
     }
 
     prompt = f"""You are the expert writer for AITechNews.co.in — India's No.1 Hinglish tech news website.
@@ -665,7 +680,7 @@ def main():
     save_published_history(history, published_titles)
 
     print(f"\n{'='*60}")
-    print(f"✅ DONE! {total}/10 articles published today!")
+    print(f"✅ DONE! {total}/12 articles published today!")
     print(f"📖 Deduplication: {len(published_titles)} titles tracked")
     print(f"📱 Web Stories: {total} new stories added")
     print(f"{'='*60}")
