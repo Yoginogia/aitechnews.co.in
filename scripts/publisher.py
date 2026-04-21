@@ -133,18 +133,17 @@ CATEGORY_CONFIG = {
 # FIX 2: CASUAL HINGLISH STYLE (Not Shuddh Hindi!)
 # Writing style that matches ACTUAL existing articles on the site
 # =============================================================================
-HINGLISH_STYLE_EXAMPLE = """
-GOOD (Casual Hinglish - matches our site):
-- "Yaar, ab imagine karo — ChatGPT se sawal pucho, YouTube par video dekho — ye sab 'Data Centers' mein process hota hai!"
-- "Google, Microsoft aur Amazon sab apna paisa India mein laga rahe hain — aur kyun na lagayein? Market jo hai!"
-- "तो agar aap soch rahe ho ki ye news sirf bade logon ke liye hai — bilkul galat!"
-- "AI ka istemal जितना बढ़ रहा है, उतना ही ज़्यादा Computing Power ki zaroorat aa rahi hai।"
-- "Seedha baat karte hain — **Bitcoin** abhi ₹58 lakh ke paas hai, aur experts bol rahe hain..."
+HANGING_STYLE_EXAMPLE = """
+GOOD (Devanagari Hindi + English Tech Terms - matches our site):
+- "यार, अब imagine करो — ChatGPT से सवाल पूछो, YouTube पर video देखो — ये सब 'Data Centers' में process होता है!"
+- "Google, Microsoft और Amazon सब अपना पैसा India में लगा रहे हैं — और क्यों ना लगाएं? Market जो है!"
+- "तो अगर आप सोच रहे हो कि ये news सिर्फ बड़े लोगों के लिए है — बिल्कुल गलत!"
+- "सीधी बात करते हैं — **Bitcoin** अभी ₹58 लाख के पास है, और experts बोल रहे हैं..."
 
-BAD (Shuddh Hindi - DO NOT write like this):
-- "यह एक महत्वपूर्ण समाचार है।" ❌
-- "आज हम इस विषय पर चर्चा करेंगे।" ❌
-- "इस तकनीक का उपयोग करना अत्यंत लाभदायक है।" ❌
+BAD (Roman Hindi / Pure English - DO NOT write like this):
+- "Yaar, ye bahut badi khabar hai." ❌ (Must use Devanagari: यार, ये बहुत बड़ी खबर है।)
+- "Aaj hum tech ke baare mein baat karenge." ❌
+- "यह एक महत्वपूर्ण समाचार है।" ❌ (Too formal/shuddh)
 """
 
 # =============================================================================
@@ -463,22 +462,23 @@ Category: {category}
 Task: {category_task.get(category, '')}
 
 WRITING STYLE — exactly match these examples from our existing articles:
-{HINGLISH_STYLE_EXAMPLE}
+{HANGING_STYLE_EXAMPLE}
 
 STRICT LANGUAGE RULES (violate = rejected):
-1. Casual Hinglish ONLY — natural mixing of Hindi + English like Indians chat on WhatsApp
-   ✅ CORRECT: "Yaar, ab **Google** ne ek badi baat boli hai — aur ye aapke kaam ki news hai!"
-   ✅ CORRECT: "AI का istemal जितना बढ़ रहा है, उतना ही zaroorat badh rahi hai।"
-   ❌ WRONG (shuddh): "यह एक महत्वपूर्ण समाचार है जो तकनीकी क्षेत्र को प्रभावित करेगा।"
-2. Use Devanagari ONLY for these common Hindi words: तो, और, है, हैं, की, का, को, में, पर, से, के, लिए, यह, वह, कि, जब, अब, सब, बड़ी, नई, यहाँ, वहाँ, हम, आप
-3. ALL technical terms stay in English: AI, CPU, GPU, RAM, Bitcoin, App, Download, Update, Deal, Price, Launch, Feature, Bug, Update, Patch, Sale
-4. Headings: Hinglish mix with emoji at end. Example: "Google का नया AI Tool — Game Changer है या Hype? 🤔"
-5. Use **bold** for all English technical terms and important numbers/prices
-6. Write 500+ words. Use \\n\\n between paragraphs.
-7. NEVER start with "Is article mein" or "Aaj hum baat karenge" — start with an exciting hook!
+1. Write the main body content in PERFECT DEVANAGARI HINDI (हिंदी लिपि).
+   ✅ CORRECT: "यह बहुत ही बढ़िया स्मार्टफोन है।"
+   ❌ WRONG (Roman Hindi): "Yeh bahut hi badhiya smartphone hai."
+2. The ONLY English words you should use are technical terms. Do NOT translate technical terms into Hindi.
+   Technical terms to keep in English: AI, CPU, GPU, RAM, Bitcoin, App, Download, Update, Deal, Price, Launch, Feature, Bug, Patch, Sale, Smartphone, Display.
+   ✅ CORRECT: "Google ने अपना नया AI Mode लॉन्च कर दिया है।"
+3. In headings and body, you can use conversational words like 'यार', 'भाई', 'तो', 'क्या' so it doesn't sound like a boring textbook, but it MUST be in Devanagari script.
+4. Use **bold** for all English technical terms and important numbers/prices.
+5. Write 500+ words. Use \\n\\n between paragraphs.
+6. NEVER start with "इस आर्टिकल में" or "आज हम बात करेंगे" — start with an exciting hook!
+7. The title/heading MUST be a mix of Devanagari and English with an emoji at the end. Example: "Google का नया AI Tool — Game Changer है या Hype? 🤔"
 
 Return ONLY raw JSON (NO markdown, NO backticks, NO extra text):
-{{"title":"Catchy Hinglish title with emoji (हिंदी+English), max 90 chars","slug":"url-slug-english-only-lowercase-hyphens-no-special-chars","excerpt":"2-3 line Hinglish SEO preview","content":"Full 500+ word article in casual Hinglish using \\n\\n between paragraphs","category":"{category}","readingTime":"5 min read"}}"""
+{{"title":"Catchy title with emoji (हिंदी+English), max 90 chars","slug":"url-slug-english-only-lowercase-hyphens-no-special-chars","excerpt":"2-3 line Hindi SEO preview","content":"Full 500+ word article in Devanagari Hindi + English tech terms using \\n\\n between paragraphs","category":"{category}","readingTime":"5 min read"}}"""
 
     try:
         return parse_json_response(call_ai(prompt))
