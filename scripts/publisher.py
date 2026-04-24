@@ -343,7 +343,8 @@ def add_story_to_stories_ts(article: dict, story_slug: str, image_url: str, cate
     cat_emoji = CATEGORY_CONFIG.get(category, {}).get("emoji", "📰")
     title_safe = article["title"][:60].replace("'", "\\'").replace("\n", " ")
     subtitle_safe = article.get("excerpt", "")[:100].replace("'", "\\'").replace("\n", " ")
-    img = f"/images/blog/{story_slug.replace('story-', '')}.jpg" if image_url.startswith("/") else image_url
+    img_raw = f"/images/blog/{story_slug.replace('story-', '')}.jpg" if image_url.startswith("/") else image_url
+    img = img_raw.replace("'", "\\'")
 
     new_entry = f"""    {{
         slug: '{story_slug}',
