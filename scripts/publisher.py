@@ -425,63 +425,142 @@ def parse_json_response(response_text: str) -> Optional[dict]:
     return None
 
 def call_ai(prompt: str) -> str:
+    # Priority 1: Gemini 2.0 Flash (FREE - 1500 req/day)
     if GEMINI_API_KEY and HAS_GEMINI:
         try:
-            model = genai.GenerativeModel("gemini-1.5-pro")
-            return model.generate_content(prompt).text
+            model = genai.GenerativeModel("gemini-2.0-flash")
+            response = model.generate_content(
+                prompt,
+                generation_config=genai.GenerationConfig(
+                    temperature=0.7,
+                    max_output_tokens=4096,
+                )
+            )
+            return response.text
         except Exception as e:
             print(f"  [Gemini failed, trying Groq] {e}")
 
+    # Priority 2: Groq (FREE tier)
     response = requests.post(
         "https://api.groq.com/openai/v1/chat/completions",
         headers={"Authorization": f"Bearer {GROQ_API_KEY}", "Content-Type": "application/json"},
         json={
             "model": "llama-3.3-70b-versatile",
             "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": 2500, "temperature": 0.7
+            "max_tokens": 4000, "temperature": 0.7
         },
-        timeout=90
+        timeout=120
     )
     return response.json()["choices"][0]["message"]["content"]
 
+def validate_article(content: str) -> bool:
+    """Validate article quality before publishing."""
+    words = len(content.split())
+    if words < 500:
+        print(f"  ⚠️ WARNING: Only {words} words (target 800+), but accepting")
+    # Check for excessive repetition
+    paragraphs = [p.strip() for p in content.split('\n\n') if len(p.strip()) > 30]
+    if len(paragraphs) >= 2:
+        seen_starts = set()
+        repeat_count = 0
+        for p in paragraphs:
+            start = p[:60]
+            if start in seen_starts:
+                repeat_count += 1
+            seen_starts.add(start)
+        if repeat_count > 2:
+            print(f"  ❌ REJECTED: Too much repetition ({repeat_count} repeated paragraphs)")
+            return False
+    # Check Devanagari presence
+    hindi_chars = sum(1 for c in content if '\u0900' <= c <= '\u097F')
+    if hindi_chars < 50:
+        print(f"  ❌ REJECTED: Not enough Devanagari characters ({hindi_chars})")
+        return False
+    return True
+
 def generate_article(item: dict, category: str) -> Optional[dict]:
-    """Generate article in CASUAL Hinglish (not shuddh Hindi)."""
-    category_task = {
-        "AI": "AI aur Technology news ke baare mein likhein.",
-        "Deals": "Amazon/Flipkart ke best tech deal ke baare mein likhein. Actual price, original MRP, discount %, aur product ka link zaroor mention karein.",
-        "Software": "Software update ya naye features ke baare mein likhein. Version number aur key changes clearly batayein.",
-        "Crypto": "Cryptocurrency market news. Price levels, trend aur India ke investors ke liye kya matlab.",
-        "Gadgets": "Naye smartphone launches, laptops, ya EV (Electric Vehicles) cars in India ke baare mein likhein. Key specs, features, battery, aur expected price zaroor highlight karein.",
+    """Generate article in professional Devanagari + English Hinglish."""
+    category_instructions = {
+        "AI": """MANDATORY STRUCTURE:
+## What happened (क्या हुआ?)
+## Key Features / Details (markdown TABLE with 5+ rows)
+## Impact on India (भारत पर असर)
+## Comparison with alternatives (markdown TABLE)
+## Expert Opinion / Analysis
+## Conclusion (Final Verdict)""",
+        "Deals": """MANDATORY STRUCTURE:
+## Key Specifications (markdown TABLE with 8+ rows: Processor, RAM, Storage, Display, Camera, Battery, Charging, Price)
+## Detailed Features (3-4 subsections with ### headings)
+## Battery / Camera Performance (with test data TABLE)
+## Price & Availability (TABLE with variants)
+## Competition Comparison (TABLE vs 3-4 competitors)
+## ✅ Pros (5+ bullet points)
+## ❌ Cons (4+ bullet points)
+## Final Verdict — Rating: X/10""",
+        "Software": """MANDATORY STRUCTURE:
+## What is the issue/update?
+## Technical Details (markdown TABLE)
+## Who is affected?
+## Step-by-step fix/guide
+## Security implications for India
+## Conclusion""",
+        "Crypto": """MANDATORY STRUCTURE:
+## Current Market Situation (with price TABLE)
+## What happened? (detailed analysis)
+## Technical Analysis (support/resistance levels TABLE)
+## Impact on Indian investors (30% tax, 1% TDS context)
+## Risk Factors
+## Investment Strategy / Conclusion""",
+        "Gadgets": """MANDATORY STRUCTURE:
+## Full Specifications (markdown TABLE with 10+ rows)
+## Key Features (3-4 subsections with ### headings)
+## Competition Comparison (TABLE vs 3 competitors)
+## Price & Availability in India
+## ✅ Pros (5+ bullet points)
+## ❌ Cons (4+ bullet points)
+## Final Verdict — Rating: X/10""",
     }
 
-    prompt = f"""You are the expert writer for AITechNews.co.in — India's No.1 Hinglish tech news website.
+    prompt = f"""You are a SENIOR tech journalist for AITechNews.co.in — India's top Hinglish tech news site.
 
-News: "{item['title']}"
-Context: {item['summary'][:400]}
-Category: {category}
-Task: {category_task.get(category, '')}
+NEWS: "{item['title']}"
+CONTEXT: {item['summary'][:500]}
+CATEGORY: {category}
 
-WRITING STYLE — exactly match these examples from our existing articles:
-{HANGING_STYLE_EXAMPLE}
+===== LANGUAGE RULES (CRITICAL — violate = article rejected) =====
+1. ALL Hindi text MUST be in DEVANAGARI script (अ, आ, इ, ई, उ...)
+   ✅ "OPPO ने अपना नया **K14 5G** smartphone India में launch कर दिया है"
+   ❌ "OPPO ne apna naya K14 5G smartphone launch kar diya hai" (ROMAN = REJECTED)
+2. Keep ALL technical terms in English: AI, GPU, RAM, Bitcoin, 5G, OLED, etc.
+3. Use **bold** for English terms and prices
+4. Professional tone — NO "यार", "भाई", "दोस्तों"
+5. Add emojis in section headings (📱🔥💰✅❌🎯🇮🇳)
 
-STRICT LANGUAGE RULES (violate = rejected):
-1. Write the main body content in PERFECT DEVANAGARI HINDI (हिंदी लिपि).
-   ✅ CORRECT: "यह बहुत ही बढ़िया स्मार्टफोन है।"
-   ❌ WRONG (Roman Hindi): "Yeh bahut hi badhiya smartphone hai."
-2. The ONLY English words you should use are technical terms. Do NOT translate technical terms into Hindi.
-   Technical terms to keep in English: AI, CPU, GPU, RAM, Bitcoin, App, Download, Update, Deal, Price, Launch, Feature, Bug, Patch, Sale, Smartphone, Display.
-   ✅ CORRECT: "Google ने अपना नया AI Mode लॉन्च कर दिया है।"
-3. In headings and body, you can use conversational words like 'यार', 'भाई', 'तो', 'क्या' so it doesn't sound like a boring textbook, but it MUST be in Devanagari script.
-4. Use **bold** for all English technical terms and important numbers/prices.
-5. Write 500+ words. Use \\n\\n between paragraphs.
-6. NEVER start with "इस आर्टिकल में" or "आज हम बात करेंगे" — start with an exciting hook!
-7. The title/heading MUST be a mix of Devanagari and English with an emoji at the end. Example: "Google का नया AI Tool — Game Changer है या Hype? 🤔"
+===== CONTENT RULES =====
+1. MINIMUM 800 words — articles under 600 words will be REJECTED
+2. NEVER repeat the same information twice
+3. MUST include at least 2 markdown tables (use |---|--- format)
+4. Include India-specific context (₹ prices, Indian availability, Indian market impact)
+5. Start with an exciting hook paragraph, NOT "इस आर्टिकल में..."
 
-Return ONLY raw JSON (NO markdown, NO backticks, NO extra text):
-{{"title":"Catchy title with emoji (हिंदी+English), max 90 chars","slug":"url-slug-english-only-lowercase-hyphens-no-special-chars","excerpt":"2-3 line Hindi SEO preview","content":"Full 500+ word article in Devanagari Hindi + English tech terms using \\n\\n between paragraphs","category":"{category}","readingTime":"5 min read"}}"""
+===== ARTICLE STRUCTURE =====
+{category_instructions.get(category, category_instructions['AI'])}
+
+===== OUTPUT FORMAT =====
+Return ONLY raw JSON (NO markdown backticks, NO extra text):
+{{"title":"Catchy Devanagari+English title with emoji, max 90 chars","slug":"url-slug-english-only-lowercase-hyphens","excerpt":"2-3 line Devanagari+English SEO description","content":"Full 800+ word article with markdown tables, headings, and proper structure","category":"{category}","readingTime":"5 min read"}}"""
 
     try:
-        return parse_json_response(call_ai(prompt))
+        result = parse_json_response(call_ai(prompt))
+        if result and 'content' in result:
+            if validate_article(result['content']):
+                return result
+            else:
+                print("  Retrying with stricter prompt...")
+                result2 = parse_json_response(call_ai(prompt + "\n\nPREVIOUS ATTEMPT WAS REJECTED. Write MORE content (800+ words), use DEVANAGARI script, include TABLES, and DO NOT repeat sentences."))
+                if result2 and 'content' in result2:
+                    return result2
+        return result
     except Exception as e:
         print(f"  Generation error: {e}")
         return None
@@ -502,29 +581,44 @@ readingTime: "{article.get('readingTime', '5 min read')}"
 """
 
 def generate_and_upload_hf_image(title: str, slug: str, category: str) -> str:
+    """Generate image via HF SDXL, fallback to local default images (NOT Pollinations URLs)."""
+    # Local fallback images that already exist in the repo
+    LOCAL_FALLBACKS = {
+        "AI": "/images/blog/agentic_ai_explained.png",
+        "AI News": "/images/blog/gpt-5-gemini-3.png",
+        "AI Tools": "/images/blog/india_ai_boom.png",
+        "Crypto": "/images/blog/ai-crypto-2026.jpg",
+        "Gadgets": "/images/blog/google_turboquant_tech.png",
+        "Deals": "/images/blog/best-ai-laptops-60k.jpg",
+        "Best Phones": "/images/blog/best-ai-laptops-60k.jpg",
+        "Software": "/images/blog/agentic_ai_explained.png",
+        "Laptops": "/images/blog/best-ai-laptops-60k.jpg",
+        "Tech News": "/images/blog/india_ai_boom.png",
+    }
+
     image_style = CATEGORY_CONFIG.get(category, CATEGORY_CONFIG["AI"])["image_style"]
-    if not HF_TOKEN:
-        encoded = title.replace(" ", "%20")[:100]
-        return f"https://image.pollinations.ai/prompt/{encoded}%20{image_style.replace(' ', '%20')}?width=1200&height=630&nologo=true"
 
-    print("  Generating HF image via SDXL...")
-    API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0"
-    prompt_text = f"hyperrealistic, cinematic lighting, 8k, masterpiece, {image_style}"
-    for attempt in range(2):
-        try:
-            res = requests.post(API_URL, headers={"Authorization": f"Bearer {HF_TOKEN}"},
-                                json={"inputs": prompt_text}, timeout=120)
-            if res.status_code == 200 and len(res.content) > 5000:
-                fname = f"{slug}.jpg"
-                if push_file_to_github(f"{IMAGE_PATH}/{fname}", res.content, is_binary=True):
-                    return f"/images/blog/{fname}"
-        except Exception as e:
-            print(f"  HF attempt {attempt+1}: {e}")
-        time.sleep(10)
+    # Try HuggingFace SDXL first (if token available)
+    if HF_TOKEN:
+        print("  Generating HF image via SDXL...")
+        API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0"
+        prompt_text = f"hyperrealistic, cinematic lighting, 8k, masterpiece, {image_style}"
+        for attempt in range(2):
+            try:
+                res = requests.post(API_URL, headers={"Authorization": f"Bearer {HF_TOKEN}"},
+                                    json={"inputs": prompt_text}, timeout=120)
+                if res.status_code == 200 and len(res.content) > 5000:
+                    fname = f"{slug}.jpg"
+                    if push_file_to_github(f"{IMAGE_PATH}/{fname}", res.content, is_binary=True):
+                        return f"/images/blog/{fname}"
+            except Exception as e:
+                print(f"  HF attempt {attempt+1}: {e}")
+            time.sleep(10)
 
-    print("  Falling back to Pollinations.")
-    encoded = title.replace(" ", "%20")[:100]
-    return f"https://image.pollinations.ai/prompt/{encoded}?width=1200&height=630&nologo=true"
+    # Fallback: Use LOCAL default images (NOT Pollinations URLs!)
+    fallback = LOCAL_FALLBACKS.get(category, "/images/blog/india_ai_boom.png")
+    print(f"  Using local fallback image: {fallback}")
+    return fallback
 
 def push_file_to_github(filepath: str, content, is_binary: bool = False) -> bool:
     url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{filepath}"
@@ -663,7 +757,7 @@ def main():
     print("Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals")
     print("=" * 60)
 
-    today_formatted = datetime.now(timezone.utc).strftime("%d %B %Y")
+    today_formatted = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     today_slug = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     print("\n📚 Loading published history for deduplication...")
