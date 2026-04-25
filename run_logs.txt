@@ -1,6 +1,6 @@
 ============================================================
 === AITechNews Publisher v4.0 - ULTRA UPDATE ===
-Run time: 2026-04-25 06:50 UTC
+Run time: 2026-04-25 06:58 UTC
 Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
 ============================================================
 
@@ -12,43 +12,54 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
 ============================================================
 
   [1/5] Meta’s loss is Thinking Machines’ gain...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  JSON parse error: Invalid control character at: line 1 column 292 (char 291)
   Skipping - generation failed
 
   [1/5] ComfyUI hits $500M valuation as creators seek more control over A...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  JSON parse error: Invalid control character at: line 1 column 313 (char 312)
   Skipping - generation failed
 
   [1/5] Google to invest up to $40B in Anthropic in cash and compute...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/5] Apple’s new CEO, and why Elon Musk wants to buy Cursor for $60B...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/5] 8 Gemini tips for organizing your space (and life)...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
   ⏭ Duplicate (100% overlap) with: here’s how our tpus power increasingly demanding a
   ⏭ Duplicate (100% overlap) with: elevating austria: google invests in its first dat
@@ -60,67 +71,89 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
 ============================================================
 
   [1/2] Ice Universe Shares Galaxy Z Fold8 Wide Dimensions, Narrower and ...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  JSON parse error: Invalid control character at: line 1 column 342 (char 341)
   Skipping - generation failed
 
   [1/2] Samsung Galaxy Z Fold8 Tipped to Get a Smaller Selfie Camera Punc...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] WhatsApp Is Testing Notification Bubbles on Android...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] You Can Now Recharge Your Jio, Airtel, Or Vi Number On WhatsApp: ...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Nothing Phone (3) April Update Improves Notifications, Calls and ...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Windows 11 KB5083769 causing a death loop on 24H2 and 25H2 system...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] iPhone 18 Pro Max dummy hints at significant camera upgrades...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Anker replaces Soundcore with new “Audio-Visual” branding...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
 ============================================================
@@ -128,99 +161,135 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
 ============================================================
 
   [1/1] ADT confirms data breach after ShinyHunters leak threat...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/1] Firestarter malware survives Cisco firewall updates, security pat...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/1] Windows Update gets new controls to reduce forced restarts...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/1] New BlackFile extortion group linked to surge of vishing attacks...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/1] Freelancers divided on the impact of AI...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/1] Microsoft acknowledges Remote Desktop problems caused by KB508376...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/1] Meta is revamping the way you sign into all of your social media ...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/1] Enterprise AI agents -- potential vs reality [Q&A]...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/1] Meta Laying Off 8,000 Employees on May 20 as AI Spending Reaches ...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/1] Microsoft Renames Gaming Division Back to Xbox as Asha Sharma Scr...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/1] OpenAI Releases GPT-5.5 With Stronger Agentic Coding, Computer Us...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/1] YouTube TV Rolls Out Customizable Multiview, Letting Users Choose...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
 ============================================================
@@ -229,116 +298,158 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   ⏭ Duplicate (100% overlap) with: hyperliquid whale holds $38m short against bitcoin
 
   [1/2] US authorities freeze $344M in crypto linked to Iran...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Bitcoin developer Paul Sztorc announces BTC hard fork called eCas...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
   ⏭ Duplicate (100% overlap) with: top memecoin holders expected to attend trump lunc
 
   [1/2] Ripple-linked XRP stalls near $1.44 as 'triangle squeeze' nears b...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] U.S. CFTC adds New York to string of states its suing to stop pre...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Bitcoin is on track for its best month in a year. $5 billion USDT...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Tether's $344 million USDT freeze linked to U.S. 'Economic Fury' ...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Russia Greenlights Crypto for Global Trade: State Duma Passes Lan...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Binance AI Wallet Unveiled: Keyless ‘Agentic Wallet’ for Web3 Aut...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Bitget Launches Pre-IPO Token Trading Starting With SpaceX on Sol...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Solana Price Just Broke a Months-Long Descending Trendline: Are $...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Brazil Issues Sweeping Ban Against Prediction Market Platforms...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Tennessee Becomes Second State to Outlaw Bitcoin, Crypto ATMs...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Trump DOJ Backs Elon Musk's xAI in Fight Over Colorado AI Bias La...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] South Korea Arrests Man for a Fake AI Wolf Photo That Raised Alar...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
 ============================================================
@@ -346,92 +457,125 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
 ============================================================
 
   [1/2] Renault developing new 1.2-litre MPFi engine for Bridger...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Mahindra XUV 3XO CNG in the works...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Mercedes-Benz CLA EV launched in India at Rs 55 lakh...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
   ⏭ Duplicate (100% overlap) with: vienna motor symposium calls for a resilient techn
 
   [1/2] Tesla offers 1 year of free Supercharging, claims ~40% premium fo...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Kia cuts EV6 prices by $5,000 on 2026 models...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] A Florida convention center doubles its solar with no added panel...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] ABB E-mobility’s new EV fast charger kills peak power hype...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] I've found the 24 best deals from the Amazon Tech Week sale — all...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Beelink EX Mate Pro dock & DAS review: An entirely different appr...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] How to watch London Marathon 2026: Free Streams & TV Channels...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
 
   [1/2] Assassin’s Creed Black Flag Resynced will ‘bring the classic game...
-  [Gemini API Error] 404: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. 
-  Generation error: 'choices'
+  [Gemini API Error gemini-1.5-flash-latest] 404
+  [Gemini API Error gemini-1.5-pro-latest] 404
+  [Gemini API Error gemini-pro] 404
+  [Gemini API Error gemini-2.0-flash] 429
+  [Groq API Error mixtral-8x7b-32768]: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer suppo
+  [Groq API Error llama-3.3-70b-versatile]: {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_0
+  [Groq API Error gemma2-9b-it]: {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no longer supported. 
+  Generation error: All AI models failed.
   Skipping - generation failed
   ✓ History saved (66 entries total)
 
