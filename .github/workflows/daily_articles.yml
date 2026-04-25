@@ -31,7 +31,7 @@ jobs:
 
       - name: Dependencies install karo
         run: |
-          pip install feedparser requests google-generativeai tweepy
+          pip install feedparser requests tweepy
 
       - name: AI Agent chalao - Multi-Category Publisher
         env:

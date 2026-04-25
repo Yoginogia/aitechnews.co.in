@@ -18,11 +18,7 @@ import base64
 from datetime import datetime, timezone, timedelta
 from typing import Optional
 
-try:
-    import google.generativeai as genai
-    HAS_GEMINI = True
-except ImportError:
-    HAS_GEMINI = False
+HAS_GEMINI = True  # We use raw REST API now
 
 # =============================================================================
 # CONFIGURATION
@@ -48,7 +44,7 @@ STORIES_DATA_PATH = "src/data/stories.ts"
 HISTORY_PATH = "scripts/published_history.json"
 
 if GEMINI_API_KEY and HAS_GEMINI:
-    genai.configure(api_key=GEMINI_API_KEY)
+    pass # No need to configure genai anymore
 
 # =============================================================================
 # CATEGORY CONFIGURATION - v4.0 with Amazon India Deals feeds
@@ -429,15 +425,18 @@ def call_ai(prompt: str) -> str:
     # Priority 1: Gemini 2.0 Flash (FREE - 1500 req/day)
     if GEMINI_API_KEY and HAS_GEMINI:
         try:
-            model = genai.GenerativeModel("gemini-2.0-flash")
-            response = model.generate_content(
-                prompt,
-                generation_config=genai.GenerationConfig(
-                    temperature=0.7,
-                    max_output_tokens=4096,
-                )
-            )
-            return response.text
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
+            payload = {
+                "contents": [{"parts": [{"text": prompt}]}],
+                "generationConfig": {"temperature": 0.7, "maxOutputTokens": 4096}
+            }
+            res = requests.post(url, headers={"Content-Type": "application/json"}, json=payload, timeout=120)
+            if res.status_code == 200:
+                data = res.json()
+                if "candidates" in data and len(data["candidates"]) > 0:
+                    return data["candidates"][0]["content"]["parts"][0]["text"]
+            else:
+                print(f"  [Gemini API Error] {res.status_code}: {res.text[:150]}")
         except Exception as e:
             print(f"  [Gemini failed, trying Groq] {e}")
 
