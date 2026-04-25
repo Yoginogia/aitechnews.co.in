@@ -425,7 +425,7 @@ def call_ai(prompt: str) -> str:
     # Priority 1: Gemini 2.0 Flash (FREE - 1500 req/day)
     if GEMINI_API_KEY and HAS_GEMINI:
         try:
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
             payload = {
                 "contents": [{"parts": [{"text": prompt}]}],
                 "generationConfig": {"temperature": 0.7, "maxOutputTokens": 4096}
@@ -445,7 +445,7 @@ def call_ai(prompt: str) -> str:
         "https://api.groq.com/openai/v1/chat/completions",
         headers={"Authorization": f"Bearer {GROQ_API_KEY}", "Content-Type": "application/json"},
         json={
-            "model": "llama-3.3-70b-versatile",
+            "model": "gemma2-9b-it",
             "messages": [{"role": "user", "content": prompt}],
             "max_tokens": 4000, "temperature": 0.7
         },
