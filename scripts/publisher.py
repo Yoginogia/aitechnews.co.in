@@ -422,36 +422,49 @@ def parse_json_response(response_text: str) -> Optional[dict]:
     return None
 
 def call_ai(prompt: str) -> str:
-    # Priority 1: Gemini 2.0 Flash (FREE - 1500 req/day)
+    # Priority 1: Gemini Models
     if GEMINI_API_KEY and HAS_GEMINI:
-        try:
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
-            payload = {
-                "contents": [{"parts": [{"text": prompt}]}],
-                "generationConfig": {"temperature": 0.7, "maxOutputTokens": 4096}
-            }
-            res = requests.post(url, headers={"Content-Type": "application/json"}, json=payload, timeout=120)
-            if res.status_code == 200:
-                data = res.json()
-                if "candidates" in data and len(data["candidates"]) > 0:
-                    return data["candidates"][0]["content"]["parts"][0]["text"]
-            else:
-                print(f"  [Gemini API Error] {res.status_code}: {res.text[:150]}")
-        except Exception as e:
-            print(f"  [Gemini failed, trying Groq] {e}")
+        gemini_models = ["gemini-1.5-flash-latest", "gemini-1.5-pro-latest", "gemini-pro", "gemini-2.0-flash"]
+        for model_name in gemini_models:
+            try:
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
+                payload = {
+                    "contents": [{"parts": [{"text": prompt}]}],
+                    "generationConfig": {"temperature": 0.7, "maxOutputTokens": 4096}
+                }
+                res = requests.post(url, headers={"Content-Type": "application/json"}, json=payload, timeout=60)
+                if res.status_code == 200:
+                    data = res.json()
+                    if "candidates" in data and len(data["candidates"]) > 0:
+                        return data["candidates"][0]["content"]["parts"][0]["text"]
+                else:
+                    print(f"  [Gemini API Error {model_name}] {res.status_code}")
+            except Exception as e:
+                print(f"  [Gemini Exception {model_name}] {e}")
 
-    # Priority 2: Groq (FREE tier)
-    response = requests.post(
-        "https://api.groq.com/openai/v1/chat/completions",
-        headers={"Authorization": f"Bearer {GROQ_API_KEY}", "Content-Type": "application/json"},
-        json={
-            "model": "gemma2-9b-it",
-            "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": 4000, "temperature": 0.7
-        },
-        timeout=120
-    )
-    return response.json()["choices"][0]["message"]["content"]
+    # Priority 2: Groq Models
+    groq_models = ["mixtral-8x7b-32768", "llama-3.3-70b-versatile", "gemma2-9b-it"]
+    for model_name in groq_models:
+        try:
+            response = requests.post(
+                "https://api.groq.com/openai/v1/chat/completions",
+                headers={"Authorization": f"Bearer {GROQ_API_KEY}", "Content-Type": "application/json"},
+                json={
+                    "model": model_name,
+                    "messages": [{"role": "user", "content": prompt}],
+                    "max_tokens": 4000, "temperature": 0.7
+                },
+                timeout=60
+            )
+            data = response.json()
+            if "choices" in data:
+                return data["choices"][0]["message"]["content"]
+            else:
+                print(f"  [Groq API Error {model_name}]: {str(data)[:100]}")
+        except Exception as e:
+            print(f"  [Groq Exception {model_name}] {e}")
+            
+    raise Exception("All AI models failed.")
 
 def validate_article(content: str) -> bool:
     """Validate article quality before publishing."""
