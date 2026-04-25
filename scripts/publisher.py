@@ -443,7 +443,7 @@ def call_ai(prompt: str) -> str:
                 print(f"  [Gemini Exception {model_name}] {e}")
 
     # Priority 2: Groq Models
-    groq_models = ["mixtral-8x7b-32768", "llama-3.3-70b-versatile", "gemma2-9b-it"]
+    groq_models = ["llama-3.1-8b-instant", "llama-3.3-70b-versatile"]
     for model_name in groq_models:
         try:
             response = requests.post(
