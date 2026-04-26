@@ -25,6 +25,7 @@ HAS_GEMINI = True  # We use raw REST API now
 # =============================================================================
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
 GITHUB_TOKEN = os.environ.get("AITECHINDIA_TOKEN", "")
 HF_TOKEN = os.environ.get("HF_TOKEN", "")
 
@@ -416,55 +417,94 @@ def parse_json_response(response_text: str) -> Optional[dict]:
         start_idx = clean.find('{')
         end_idx = clean.rfind('}') + 1
         if start_idx >= 0 and end_idx > start_idx:
-            return json.loads(clean[start_idx:end_idx])
+            # Fix common control character JSON issues
+            json_str = clean[start_idx:end_idx].replace('\n', '\\n').replace('\r', '')
+            try:
+                return json.loads(json_str)
+            except json.JSONDecodeError:
+                # Basic cleanup for unescaped quotes or invalid chars
+                json_str = re.sub(r'[\x00-\x1f\x7f-\x9f]', '', clean[start_idx:end_idx])
+                return json.loads(json_str)
     except Exception as e:
         print(f"  JSON parse error: {e}")
     return None
 
 def call_ai(prompt: str) -> str:
-    # Priority 1: Gemini Models
+    # Priority 1: Gemini Models (Direct)
     if GEMINI_API_KEY and HAS_GEMINI:
-        gemini_models = ["gemini-1.5-flash-latest", "gemini-1.5-pro-latest", "gemini-pro", "gemini-2.0-flash"]
+        gemini_models = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-pro"]
         for model_name in gemini_models:
             try:
                 url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
                 payload = {
                     "contents": [{"parts": [{"text": prompt}]}],
-                    "generationConfig": {"temperature": 0.7, "maxOutputTokens": 4096}
+                    "generationConfig": {
+                        "temperature": 0.7, 
+                        "maxOutputTokens": 4096,
+                        "responseMimeType": "application/json"
+                    }
                 }
                 res = requests.post(url, headers={"Content-Type": "application/json"}, json=payload, timeout=60)
                 if res.status_code == 200:
                     data = res.json()
                     if "candidates" in data and len(data["candidates"]) > 0:
                         return data["candidates"][0]["content"]["parts"][0]["text"]
+                elif res.status_code == 429:
+                    print(f"  [Gemini Rate Limit 429] {model_name} - Sleeping 30s...")
+                    time.sleep(30)
                 else:
                     print(f"  [Gemini API Error {model_name}] {res.status_code}")
             except Exception as e:
                 print(f"  [Gemini Exception {model_name}] {e}")
 
-    # Priority 2: Groq Models
-    groq_models = ["llama-3.1-8b-instant", "llama-3.3-70b-versatile"]
-    for model_name in groq_models:
-        try:
-            response = requests.post(
-                "https://api.groq.com/openai/v1/chat/completions",
-                headers={"Authorization": f"Bearer {GROQ_API_KEY}", "Content-Type": "application/json"},
-                json={
-                    "model": model_name,
-                    "messages": [{"role": "user", "content": prompt}],
-                    "max_tokens": 4000, "temperature": 0.7
-                },
-                timeout=60
-            )
-            data = response.json()
-            if "choices" in data:
-                return data["choices"][0]["message"]["content"]
-            else:
-                print(f"  [Groq API Error {model_name}]: {str(data)[:100]}")
-        except Exception as e:
-            print(f"  [Groq Exception {model_name}] {e}")
-            
-    raise Exception("All AI models failed.")
+    # Priority 2: OpenRouter (Fallback to free/cheap models)
+    if OPENROUTER_API_KEY:
+        or_models = ["meta-llama/llama-3-8b-instruct:free", "google/gemma-2-9b-it:free", "mistralai/mistral-7b-instruct:free"]
+        for model_name in or_models:
+            try:
+                print(f"  Trying OpenRouter Model: {model_name}")
+                response = requests.post(
+                    "https://openrouter.ai/api/v1/chat/completions",
+                    headers={"Authorization": f"Bearer {OPENROUTER_API_KEY}", "Content-Type": "application/json"},
+                    json={"model": model_name, "messages": [{"role": "user", "content": prompt}], "response_format": {"type": "json_object"}},
+                    timeout=60
+                )
+                if response.status_code == 200:
+                    return response.json()["choices"][0]["message"]["content"]
+                elif response.status_code == 429:
+                    print(f"  [OpenRouter 429] {model_name} - Sleeping 10s...")
+                    time.sleep(10)
+            except Exception as e:
+                print(f"  [OpenRouter Exception] {e}")
+
+    # Priority 3: Groq Models
+    if GROQ_API_KEY:
+        groq_models = ["llama-3.1-8b-instant", "gemma2-9b-it", "mixtral-8x7b-32768"]
+        for model_name in groq_models:
+            try:
+                print(f"  Trying Groq Model: {model_name}")
+                response = requests.post(
+                    "https://api.groq.com/openai/v1/chat/completions",
+                    headers={"Authorization": f"Bearer {GROQ_API_KEY}", "Content-Type": "application/json"},
+                    json={
+                        "model": model_name,
+                        "messages": [{"role": "user", "content": prompt}],
+                        "max_tokens": 4000, "temperature": 0.7,
+                        "response_format": {"type": "json_object"}
+                    },
+                    timeout=60
+                )
+                if response.status_code == 200:
+                    return response.json()["choices"][0]["message"]["content"]
+                elif response.status_code == 429:
+                    print(f"  [Groq Rate Limit 429] {model_name} - Sleeping 20s...")
+                    time.sleep(20)
+                else:
+                    print(f"  [Groq API Error {model_name}]: {response.status_code}")
+            except Exception as e:
+                print(f"  [Groq Exception {model_name}] {e}")
+                
+    raise Exception("All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.")
 
 def validate_article(content: str) -> bool:
     """Validate article quality before publishing."""
@@ -756,7 +796,7 @@ def publish_category(category: str, today_formatted: str, today_slug: str,
                 post_to_facebook(article['title'], clean_slug, image_url, category)
                 publish_web_story(article, slug, image_url, category, article_url)
 
-            time.sleep(10)
+            time.sleep(60) # Increased sleep to 60s to avoid rate limits
 
         except Exception as e:
             print(f"  Error: {e}")
