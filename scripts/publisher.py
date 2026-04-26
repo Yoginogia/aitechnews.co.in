@@ -637,16 +637,16 @@ def generate_and_upload_hf_image(title: str, slug: str, category: str) -> str:
     """Generate image via HF SDXL, fallback to local default images (NOT Pollinations URLs)."""
     # Local fallback images that already exist in the repo
     LOCAL_FALLBACKS = {
-        "AI": "/images/blog/agentic_ai_explained.png",
-        "AI News": "/images/blog/gpt-5-gemini-3.png",
-        "AI Tools": "/images/blog/india_ai_boom.png",
+        "AI": "/images/blog/agentic_ai_explained.webp",
+        "AI News": "/images/blog/gpt-5-gemini-3.webp",
+        "AI Tools": "/images/blog/india_ai_boom.webp",
         "Crypto": "/images/blog/ai-crypto-2026.jpg",
-        "Gadgets": "/images/blog/google_turboquant_tech.png",
+        "Gadgets": "/images/blog/google_turboquant_tech.webp",
         "Deals": "/images/blog/best-ai-laptops-60k.jpg",
         "Best Phones": "/images/blog/best-ai-laptops-60k.jpg",
-        "Software": "/images/blog/agentic_ai_explained.png",
+        "Software": "/images/blog/agentic_ai_explained.webp",
         "Laptops": "/images/blog/best-ai-laptops-60k.jpg",
-        "Tech News": "/images/blog/india_ai_boom.png",
+        "Tech News": "/images/blog/india_ai_boom.webp",
     }
 
     image_style = CATEGORY_CONFIG.get(category, CATEGORY_CONFIG["AI"])["image_style"]
