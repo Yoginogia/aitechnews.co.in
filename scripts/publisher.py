@@ -338,15 +338,15 @@ def add_story_to_stories_ts(article: dict, story_slug: str, image_url: str, cate
 
     cat_color = CATEGORY_CONFIG.get(category, {}).get("color", "#8b5cf6")
     cat_emoji = CATEGORY_CONFIG.get(category, {}).get("emoji", "📰")
-    title_safe = article["title"][:60].replace("'", "\\'").replace("\n", " ")
-    subtitle_safe = article.get("excerpt", "")[:100].replace("'", "\\'").replace("\n", " ")
+    title_safe = article["title"][:60].replace("`", "").replace("\n", " ")
+    subtitle_safe = article.get("excerpt", "")[:100].replace("`", "").replace("\n", " ")
     img_raw = f"/images/blog/{story_slug.replace('story-', '')}.jpg" if image_url.startswith("/") else image_url
     img = img_raw.replace("'", "\\'")
 
     new_entry = f"""    {{
         slug: '{story_slug}',
-        title: '{title_safe}',
-        subtitle: '{subtitle_safe}',
+        title: `{title_safe}`,
+        subtitle: `{subtitle_safe}`,
         category: '{cat_emoji} {category}',
         categoryColor: '{cat_color}',
         image: '{img}',
