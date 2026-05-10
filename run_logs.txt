@@ -1,26 +1,26 @@
 ============================================================
 === AITechNews Publisher v4.0 - ULTRA UPDATE ===
-Run time: 2026-05-09 01:57 UTC
+Run time: 2026-05-10 01:55 UTC
 Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
 ============================================================
 
 📚 Loading published history for deduplication...
-  Found 151 recent articles in history
+  Found 156 recent articles in history
 
 ============================================================
   CATEGORY: 🤖 AI (target: 5 articles)
 ============================================================
 
+  [1/5] So you’ve heard these AI terms and nodded along; let’s fix that...
+  Skipping - generation failed
+
+  [1/5] Nvidia has already committed $40B to equity AI deals this year...
+  Skipping - generation failed
+
   [1/5] Laid-off Oracle workers tried to negotiate better severance. Orac...
   Skipping - generation failed
 
   [1/5] Intel’s comeback story is even wilder than it seems...
-  Skipping - generation failed
-
-  [1/5] Cloudflare says AI made 1,100 jobs obsolete, even as revenue hit ...
-  Skipping - generation failed
-
-  [1/5] The “people’s airline” and the enterprise AI gold rush...
   Skipping - generation failed
 
   [1/5] See what happens when creative legends use AI to make ads for sma...
@@ -61,26 +61,33 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   [1/2] Google Health App Launches With Gemini AI Coach and Full Redesign...
   Skipping - generation failed
 
-  [1/2] Hisense launches G7 Pro Mini LED gaming monitor with 4K 180Hz & F...
+  [1/2] DJI Osmo Pocket 4P global launch confirmed; design official...
   Skipping - generation failed
 
-  [1/2] Hisense launches Vidda LightGo portable projectors with triple la...
+  [1/2] Apple turns to Intel to manufacture its next-gen MacBook Neo chip...
   Skipping - generation failed
 
-  [1/2] Mysterious Redmi K100 series phone tipped with insane 7-inch 2K d...
+  [1/2] Samsung Stops Selling TVs and Home Appliances in China — Here’s W...
   Skipping - generation failed
 
-  [1/2] iPhone 18 Pro Series: 7 Upgrades You Cannot Ignore...
+  [1/2] Sony PS5 Sales Crash After Massive Price Hikes, PS6 Development C...
   Skipping - generation failed
 
 ============================================================
   CATEGORY: 💻 Software (target: 1 articles)
 ============================================================
 
-  [1/1] NVIDIA confirms GeForce NOW data breach affecting Armenian users...
+  [1/1] JDownloader site hacked to replace installers with Python RAT mal...
   Skipping - generation failed
 
-  [1/1] Why More Analysts Won’t Solve Your SOC’s Alert Problem...
+  [1/1] Fake OpenAI repository on Hugging Face pushes infostealer malware...
+  Skipping - generation failed
+
+  [1/1] NVIDIA confirms GeForce NOW data breach affecting Armenian users...
+  Skipping - generation failed
+  ⏭ Duplicate (100% overlap) with: why more analysts won’t solve your soc’s alert pro
+
+  [1/1] Microsoft reveals why some Windows 11 updates take ages to instal...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -88,25 +95,29 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 396 words (target 800+), but accepting
+  ⚠️ WARNING: Only 411 words (target 800+), but accepting
   Generating HF image via SDXL...
   Using local fallback image: /images/blog/agentic_ai_explained.webp
-  ✓ Published: software-alert-fatigue-ai-analysts-alert-problem-nipatne-me-2026-05-09.md
+  ✓ Published: software-windows-11-update-installation-microsoft-explanati-2026-05-10.md
   ✓ Telegram
   ✗ Twitter: 401 Unauthorized
 Unauthorized
   Generating Web Story...
-  ✓ Web Story: software-story-alert-fatigue-ai-analysts-alert-problem-nipatne-me.html
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ✓ Web Story: software-story-windows-11-update-installation-microsoft-explanati.html
   ✓ stories.ts updated
 
 ============================================================
   CATEGORY: ₿ Crypto (target: 2 articles)
 ============================================================
 
-  [1/2] Bitcoin stalls as BTC ETF outflows hit $268M: Will new Fed chair ...
-  Skipping - generation failed
-
-  [1/2] Crypto exchanges pushed US lawmakers to bar provision on risky to...
+  [1/2] CZ says crypto exchange rivals opposed his pardon bid...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -114,12 +125,12 @@ Unauthorized
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 226 words (target 800+), but accepting
-  ❌ REJECTED: Too much repetition (3 repeated paragraphs)
+  ⚠️ WARNING: Only 406 words (target 800+), but accepting
+  ❌ REJECTED: Too much repetition (4 repeated paragraphs)
   Retrying with stricter prompt...
   Generating HF image via SDXL...
   Using local fallback image: /images/blog/ai-crypto-2026.jpg
-  ✓ Published: crypto-crypto-exchanges-push-us-lawmakers-to-bar-provisio-2026-05-09.md
+  ✓ Published: crypto-crypto-exchange-rivals-opposed-cz-pardon-bid-2026-05-10.md
   ✓ Telegram
   ✗ Twitter: 401 Unauthorized
 Unauthorized
@@ -131,10 +142,10 @@ Unauthorized
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ✓ Web Story: crypto-story-crypto-exchanges-push-us-lawmakers-to-bar-provisio.html
+  ✓ Web Story: crypto-story-crypto-exchange-rivals-opposed-cz-pardon-bid.html
   ✓ stories.ts updated
 
-  [2/2] Estonia's FSA issues investor warning about Zondacrypto...
+  [2/2] 7 major Bitcoin mining pools join Stratum V2, working group...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -142,10 +153,18 @@ Unauthorized
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 303 words (target 800+), but accepting
+  ❌ REJECTED: Too much repetition (3 repeated paragraphs)
+  Retrying with stricter prompt...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
   Generating HF image via SDXL...
   Using local fallback image: /images/blog/ai-crypto-2026.jpg
-  ✓ Published: crypto-estonia-fsa-zondacrypto-investor-warning-2026-05-09.md
+  ✓ Published: crypto-bitcoin-mining-pools-join-stratum-v2-2026-05-10.md
   ✓ Telegram
   ✗ Twitter: 401 Unauthorized
 Unauthorized
@@ -157,30 +176,17 @@ Unauthorized
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ✓ Web Story: crypto-story-estonia-fsa-zondacrypto-investor-warning.html
+  ✓ Web Story: crypto-story-bitcoin-mining-pools-join-stratum-v2.html
   ✓ stories.ts updated
 
 ============================================================
   CATEGORY: 📱 Gadgets (target: 2 articles)
 ============================================================
 
-  [1/2] Hyundai to launch new SUV to sit alongside Creta in FY2027...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  [Groq API Error llama-3.1-8b-instant]: 400
-  Trying Groq Model: gemma2-9b-it
-  [Groq API Error gemma2-9b-it]: 400
-  Trying Groq Model: mixtral-8x7b-32768
-  [Groq API Error mixtral-8x7b-32768]: 400
-  Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
+  [1/2] MG Windsor EV gets benefits of up to Rs 85,000 in May 2026...
   Skipping - generation failed
 
-  [1/2] Tata launches Nexon Pure+ PS trim at Rs 9.59 lakh...
+  [1/2] Mahindra exploring hybrid powertrains for XEV 9e and XUV 7XO...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -188,10 +194,9 @@ Unauthorized
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 289 words (target 800+), but accepting
   Generating HF image via SDXL...
   Using local fallback image: /images/blog/google_turboquant_tech.webp
-  ✓ Published: gadgets-tata-nexon-pure-plus-launch-price-2026-05-09.md
+  ✓ Published: gadgets-mahindra-hybrid-powertrain-xev-9e-xuv-7xo-2026-05-10.md
   ✓ Telegram
   ✗ Twitter: 401 Unauthorized
 Unauthorized
@@ -203,10 +208,10 @@ Unauthorized
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ✓ Web Story: gadgets-story-tata-nexon-pure-plus-launch-price.html
+  ✓ Web Story: gadgets-story-mahindra-hybrid-powertrain-xev-9e-xuv-7xo.html
   ✓ stories.ts updated
 
-  [2/2] Hyundai records growth for hatchbacks and sedans in FY26...
+  [2/2] Skoda-VW evaluating ICE conversion of IMP base for future hybrid ...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -214,10 +219,10 @@ Unauthorized
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 426 words (target 800+), but accepting
+  ⚠️ WARNING: Only 452 words (target 800+), but accepting
   Generating HF image via SDXL...
   Using local fallback image: /images/blog/google_turboquant_tech.webp
-  ✓ Published: gadgets-hyundai-fy26-hatchback-sedan-sales-growth-2026-05-09.md
+  ✓ Published: gadgets-skoda-vw-ice-conversion-imp-basis-future-hybrid-mo-2026-05-10.md
   ✓ Telegram
   ✗ Twitter: 401 Unauthorized
 Unauthorized
@@ -229,9 +234,9 @@ Unauthorized
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ✓ Web Story: gadgets-story-hyundai-fy26-hatchback-sedan-sales-growth.html
+  ✓ Web Story: gadgets-story-skoda-vw-ice-conversion-imp-basis-future-hybrid-mo.html
   ✓ stories.ts updated
-  ✓ History saved (156 entries total)
+  ✓ History saved (161 entries total)
 
 ============================================================
 ✅ DONE! 5/12 articles published today!
