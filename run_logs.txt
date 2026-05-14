@@ -1,91 +1,102 @@
 ============================================================
 === AITechNews Publisher v4.0 - ULTRA UPDATE ===
-Run time: 2026-05-13 02:07 UTC
+Run time: 2026-05-14 02:10 UTC
 Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
 ============================================================
 
 📚 Loading published history for deduplication...
-  Found 172 recent articles in history
+  Found 181 recent articles in history
 
 ============================================================
   CATEGORY: 🤖 AI (target: 5 articles)
 ============================================================
 
-  [1/5] Medicare’s new payment model is built for AI, and most of the tec...
+  [1/5] Notion just turned its workspace into a hub for AI agents...
+  Skipping - generation failed
+
+  [1/5] Musk’s xAI is running nearly 50 gas turbines unchecked at its Mis...
+  Skipping - generation failed
+
+  [1/5] Anthropic’s Cat Wu says that, in the future, AI will anticipate y...
+  Skipping - generation failed
+
+  [1/5] Who trusts Sam Altman?...
+  Skipping - generation failed
+
+  [1/5] The new AI-powered Google Finance is expanding to Europe....
+  Skipping - generation failed
+
+  [1/5] See what happens when creative legends use AI to make ads for sma...
+  Skipping - generation failed
+  ⏭ Duplicate (100% overlap) with: 5 gardening tips you can try right in search
+
+  [1/5] Google is partnering with XPRIZE and Range Media Partners on the ...
+  Skipping - generation failed
+
+  [1/5] Building a safe, effective sandbox to enable Codex on Windows...
+  Skipping - generation failed
+
+  [1/5] How finance teams use Codex...
+  Skipping - generation failed
+
+  [1/5] What Parameter Golf taught us about AI-assisted research...
+  [Gemini API Error gemini-2.5-flash] 502
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 420 words (target 800+), but accepting
   Generating HF image via SDXL...
   Using local fallback image: /images/blog/agentic_ai_explained.webp
-  ✓ Published: ai-medicare-new-ai-payment-model-healthcare-revolutio-2026-05-13.md
+  ✓ Published: ai-ai-assisted-research-golf-parameter-golf-2026-05-14.md
   ✓ Telegram
   ✗ Twitter: 401 Unauthorized
 Unauthorized
   Generating Web Story...
-  ✓ Web Story: ai-story-medicare-new-ai-payment-model-healthcare-revolutio.html
+  ✓ Web Story: ai-story-ai-assisted-research-golf-parameter-golf.html
   ✓ stories.ts updated
 
-  [2/5] Musk mulled handing OpenAI to his children, Altman testifies...
-  Skipping - generation failed
-
-  [2/5] Anthropic warns investors against secondary platforms offering ac...
-  Skipping - generation failed
-
-  [2/5] Report: Google and SpaceX in talks to put data centers into orbit...
-  Skipping - generation failed
-
-  [2/5] The new AI-powered Google Finance is expanding to Europe....
-  Skipping - generation failed
-
-  [2/5] See what happens when creative legends use AI to make ads for sma...
-  Skipping - generation failed
-
-  [2/5] 5 gardening tips you can try right in Search...
+  [2/5] AutoScout24 scales engineering with AI-powered workflows...
+  [Gemini Exception gemini-2.5-flash] HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 427 words (target 800+), but accepting
   Generating HF image via SDXL...
   Using local fallback image: /images/blog/agentic_ai_explained.webp
-  ✓ Published: ai-google-search-ai-powered-gardening-tips-india-2026-05-13.md
+  ✓ Published: ai-autoscout24-scales-engineering-with-ai-powered-wor-2026-05-14.md
   ✓ Telegram
   ✗ Twitter: 401 Unauthorized
 Unauthorized
   Generating Web Story...
-  ✓ Web Story: ai-story-google-search-ai-powered-gardening-tips-india.html
+  ✓ Web Story: ai-story-autoscout24-scales-engineering-with-ai-powered-wor.html
   ✓ stories.ts updated
-
-  [3/5] Google is partnering with XPRIZE and Range Media Partners on the ...
-  Skipping - generation failed
-
-  [3/5] How finance teams use Codex...
-  Skipping - generation failed
-
-  [3/5] How NVIDIA engineers and researchers build with Codex...
-  Skipping - generation failed
-
-  [3/5] What Parameter Golf taught us about AI-assisted research...
-  Skipping - generation failed
-
-  [3/5] AutoScout24 scales engineering with AI-powered workflows...
-  Skipping - generation failed
 
 ============================================================
   CATEGORY: 🛍️ Deals (target: 2 articles)
 ============================================================
 
-  [1/2] Android 17: Every New Feature from The Android Show Explained...
+  [1/2] Motorola Razr Fold vs. Samsung Galaxy Z Fold7: The Definitive Pre...
   Skipping - generation failed
 
-  [1/2] Google Unveils The “Create My Widget” For Vibe-Coding Your Own Cu...
+  [1/2] vivo T5 Pro Review: Bigger Battery, Brighter Display, But The Cam...
   Skipping - generation failed
 
-  [1/2] Forget The Chromebook: Google’s New Googlebook Is Built Entirely ...
+  [1/2] CBSE Class 12 Result 2026 Out: How to Download Marksheet on DigiL...
   Skipping - generation failed
 
-  [1/2] Gemini Is Finally Making Your Car’s Voice Assistant Stop Being Du...
+  [1/2] OPPO Find X9 Ultra and Find X9s India Launch Set for May 21...
   Skipping - generation failed
 
-  [1/2] Google is bringing Android to laptops with its new AI-focused Goo...
+  [1/2] Lenovo launches new affordable 27-inch 210Hz 2K gaming monitor...
   Skipping - generation failed
 
-  [1/2] Google is turning Android into an AI agent with Gemini Intelligen...
-  Skipping - generation failed
-
-  [1/2] Sony launches Reon Pocket Pro Plus wearable AC with improved cool...
+  [1/2] Ugreen launches 16-inch 2.5K 165Hz portable monitor with magnetic...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -93,51 +104,29 @@ Unauthorized
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 467 words (target 800+), but accepting
-  Generating HF image via SDXL...
-  Using local fallback image: /images/blog/best-ai-laptops-60k.jpg
-  ✓ Published: deals-sony-reon-pocket-pro-plus-wearable-ac-review-2026-05-13.md
-  ✓ Telegram
-  ✗ Twitter: 401 Unauthorized
-Unauthorized
-  Generating Web Story...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ✓ Web Story: deals-story-sony-reon-pocket-pro-plus-wearable-ac-review.html
-  ✓ stories.ts updated
+  [Groq API Error llama-3.1-8b-instant]: 400
+  Trying Groq Model: gemma2-9b-it
+  [Groq API Error gemma2-9b-it]: 400
+  Trying Groq Model: mixtral-8x7b-32768
+  [Groq API Error mixtral-8x7b-32768]: 400
+  Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
+  Skipping - generation failed
+  ⏭ Duplicate (67% overlap) with: ugreen launches new 45w 10,000mah power bank with 
 
-  [2/2] Lenovo Legion Y70 2026 key specs revealed ahead of May 19 launch...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 474 words (target 800+), but accepting
-  Generating HF image via SDXL...
-  Using local fallback image: /images/blog/best-ai-laptops-60k.jpg
-  ✓ Published: deals-lenovo-legion-y70-2026-features-price-specs-2026-05-13.md
-  ✓ Telegram
-  ✗ Twitter: 401 Unauthorized
-Unauthorized
-  Generating Web Story...
-  ✓ Web Story: deals-story-lenovo-legion-y70-2026-features-price-specs.html
-  ✓ stories.ts updated
+  [1/2] The Best Samsung Phones Under $500...
+  Skipping - generation failed
 
 ============================================================
   CATEGORY: 💻 Software (target: 1 articles)
 ============================================================
 
-  [1/1] US govt seeks Instructure testimony on massive Canvas cyberattack...
+  [1/1] West Pharmaceutical says hackers stole data, encrypted systems...
   Skipping - generation failed
 
-  [1/1] UK fines water supplier $1.3M for exposing data of 664k customers...
+  [1/1] Iranian hackers targeted major South Korean electronics maker...
+  Skipping - generation failed
+
+  [1/1] New critical Exim mailer flaw allows remote code execution...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -145,10 +134,19 @@ Unauthorized
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 243 words (target 800+), but accepting
+  ⚠️ WARNING: Only 306 words (target 800+), but accepting
+  ❌ REJECTED: Not enough Devanagari characters (0)
+  Retrying with stricter prompt...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
   Generating HF image via SDXL...
   Using local fallback image: /images/blog/agentic_ai_explained.webp
-  ✓ Published: software-uk-fines-south-staffordshire-water-plc-for-data-br-2026-05-13.md
+  ✓ Published: software-exim-mailer-flaw-remote-code-execution-india-email-2026-05-14.md
   ✓ Telegram
   ✗ Twitter: 401 Unauthorized
 Unauthorized
@@ -160,14 +158,22 @@ Unauthorized
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ✓ Web Story: software-story-uk-fines-south-staffordshire-water-plc-for-data-br.html
+  ✓ Web Story: software-story-exim-mailer-flaw-remote-code-execution-india-email.html
   ✓ stories.ts updated
 
 ============================================================
   CATEGORY: ₿ Crypto (target: 2 articles)
 ============================================================
+  ⏭ Duplicate (100% overlap) with: here’s what happened in crypto today
 
-  [1/2] Bermuda to transition ‘key’ financial services to Stellar blockch...
+  [1/2] Coinbase CEO Brian Armstrong gets behind CLARITY Act ahead of Thu...
+  Skipping - generation failed
+  ⏭ Duplicate (86% overlap) with: senate confirms kevin warsh as federal reserve gov
+
+  [1/2] Whale shorts $70M in crypto and tech: Should Bitcoin traders worr...
+  Skipping - generation failed
+
+  [1/2] Ethereum app builder Consensys has delayed its potential IPO unti...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -175,7 +181,7 @@ Unauthorized
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 459 words (target 800+), but accepting
+  ⚠️ WARNING: Only 409 words (target 800+), but accepting
   ❌ REJECTED: Too much repetition (3 repeated paragraphs)
   Retrying with stricter prompt...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
@@ -187,22 +193,15 @@ Unauthorized
   Trying Groq Model: llama-3.1-8b-instant
   Generating HF image via SDXL...
   Using local fallback image: /images/blog/ai-crypto-2026.jpg
-  ✓ Published: crypto-bermuda-stellar-blockchain-transition-2026-05-13.md
+  ✓ Published: crypto-consensys-ipo-delayed-fall-ethereum-app-builder-2026-05-14.md
   ✓ Telegram
   ✗ Twitter: 401 Unauthorized
 Unauthorized
   Generating Web Story...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ✓ Web Story: crypto-story-bermuda-stellar-blockchain-transition.html
+  ✓ Web Story: crypto-story-consensys-ipo-delayed-fall-ethereum-app-builder.html
   ✓ stories.ts updated
 
-  [2/2] Senate confirms Kevin Warsh as Federal Reserve governor, with cha...
+  [2/2] The Protocol: Solana’s ‘Alpenglow’ upgrade is live for testing...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -210,10 +209,9 @@ Unauthorized
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 314 words (target 800+), but accepting
   Generating HF image via SDXL...
   Using local fallback image: /images/blog/ai-crypto-2026.jpg
-  ✓ Published: crypto-kevin-warsh-federal-reserve-governor-senate-confir-2026-05-13.md
+  ✓ Published: crypto-solana-alpenglow-upgrade-indian-investors-2026-05-14.md
   ✓ Telegram
   ✗ Twitter: 401 Unauthorized
 Unauthorized
@@ -225,14 +223,14 @@ Unauthorized
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ✓ Web Story: crypto-story-kevin-warsh-federal-reserve-governor-senate-confir.html
+  ✓ Web Story: crypto-story-solana-alpenglow-upgrade-indian-investors.html
   ✓ stories.ts updated
 
 ============================================================
   CATEGORY: 📱 Gadgets (target: 2 articles)
 ============================================================
 
-  [1/2] Kia to launch Syros EV in August this year...
+  [1/2] Royal Enfield Sherpa FT Mk2 debuts at Flat Track World Championsh...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -250,48 +248,9 @@ Unauthorized
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  [Groq API Error llama-3.1-8b-instant]: 400
-  Trying Groq Model: gemma2-9b-it
-  [Groq API Error gemma2-9b-it]: 400
-  Trying Groq Model: mixtral-8x7b-32768
-  [Groq API Error mixtral-8x7b-32768]: 400
-  Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
-  Skipping - generation failed
-
-  [1/2] Tata launches Altroz CNG AMT at Rs 8.70 lakh...
-  Skipping - generation failed
-
-  [1/2] Range Rover Sport SV launched at Rs 2.05 crore...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 435 words (target 800+), but accepting
   Generating HF image via SDXL...
   Using local fallback image: /images/blog/google_turboquant_tech.webp
-  ✓ Published: gadgets-range-rover-sport-sv-launched-in-india-at-rs-205-c-2026-05-13.md
-  ✓ Telegram
-  ✗ Twitter: 401 Unauthorized
-Unauthorized
-  Generating Web Story...
-  ✓ Web Story: gadgets-story-range-rover-sport-sv-launched-in-india-at-rs-205-c.html
-  ✓ stories.ts updated
-
-  [2/2] Honda Air Blade maxi-scooter patented in India...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 367 words (target 800+), but accepting
-  Generating HF image via SDXL...
-  Using local fallback image: /images/blog/google_turboquant_tech.webp
-  ✓ Published: gadgets-honda-air-blade-maxi-scooter-india-patented-2026-05-13.md
+  ✓ Published: gadgets-royal-enfield-sherpa-ft-mk2-flat-track-world-champ-2026-05-14.md
   ✓ Telegram
   ✗ Twitter: 401 Unauthorized
 Unauthorized
@@ -303,12 +262,31 @@ Unauthorized
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ✓ Web Story: gadgets-story-honda-air-blade-maxi-scooter-india-patented.html
+  ✓ Web Story: gadgets-story-royal-enfield-sherpa-ft-mk2-flat-track-world-champ.html
   ✓ stories.ts updated
-  ✓ History saved (181 entries total)
+
+  [2/2] Honda City facelift leaked ahead of official reveal...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 434 words (target 800+), but accepting
+  Generating HF image via SDXL...
+  Using local fallback image: /images/blog/google_turboquant_tech.webp
+  ✓ Published: gadgets-honda-city-facelift-leaked-2026-05-14.md
+  ✓ Telegram
+  ✗ Twitter: 401 Unauthorized
+Unauthorized
+  Generating Web Story...
+  ✓ Web Story: gadgets-story-honda-city-facelift-leaked.html
+  ✓ stories.ts updated
+  ✓ History saved (188 entries total)
 
 ============================================================
-✅ DONE! 9/12 articles published today!
-📖 Deduplication: 9 titles tracked
-📱 Web Stories: 9 new stories added
+✅ DONE! 7/12 articles published today!
+📖 Deduplication: 7 titles tracked
+📱 Web Stories: 7 new stories added
 ============================================================
