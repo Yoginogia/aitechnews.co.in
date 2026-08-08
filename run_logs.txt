@@ -1,6 +1,6 @@
 ============================================================
 === AITechNews Publisher v4.0 - ULTRA UPDATE ===
-Run time: 2026-08-07 02:05 UTC
+Run time: 2026-08-08 00:51 UTC
 Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
 ============================================================
 
@@ -11,17 +11,33 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   CATEGORY: 🤖 AI (target: 5 articles)
 ============================================================
 
-  [1/5] OpenAI’s new AI smart speaker will reportedly sell for between $3...
+  [1/5] OpenAI says it slowed Astra model development over security conce...
   Skipping - generation failed
 
-  [1/5] ChatGPT brings unlimited text chats to free users...
+  [1/5] After Rippling blew millions on AI in months, it built an employe...
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/agentic_ai_explained.webp
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/5] Cloudflare launches Kitesurf, a browser built for AI agents...
   Skipping - generation failed
 
-  [1/5] Naïve raises $28.5M to automate the grunt work of setting up and ...
-  Skipping - generation failed
-
-  [1/5] Gen Z dating apps like Ditto ditch swiping in favor of AI matchma...
-  Skipping - generation failed
+  [1/5] Airbnb says AI is helping it ship features faster as it tests a n...
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/agentic_ai_explained.webp
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
 
   [1/5] The latest AI news we announced in July 2026...
   Skipping - generation failed
@@ -35,73 +51,124 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   [1/5] 5 ways AI Mode in Search helps you enjoy the real world...
   Skipping - generation failed
 
+  [1/5] Responding to the next frontier of critical cyber capabilities...
+  Skipping - generation failed
+
+  [1/5] How HSP GRUPPE builds AI capabilities for tax advisory...
+  Skipping - generation failed
+
   [1/5] Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 ...
   Skipping - generation failed
 
   [1/5] Working with the American Psychological Association on youth ment...
   Skipping - generation failed
 
-  [1/5] From asking to doing: How the world is putting ChatGPT to work...
-  Skipping - generation failed
-
-  [1/5] Third-party cyber evaluations involving OpenAI models...
-  Skipping - generation failed
-
 ============================================================
   CATEGORY: 🛍️ Deals (target: 2 articles)
 ============================================================
 
-  [1/2] ColorOS 17 Closed Beta Goes Live: Eligible Devices, How to Apply,...
+  [1/2] iPhone 17 Pro Now Under ₹1,25,000 At Croma; AppleCare gets 15% Of...
   Skipping - generation failed
 
-  [1/2] One UI 9.5 Details Emerge: New Banner Design, Android 17 Base, Ea...
+  [1/2] Samsung’s Biggest Foldable Lineup Ever Is Now On Sale In India...
   Skipping - generation failed
 
-  [1/2] HP OmniPad 12 Goes On Sale In India At ₹48,999 With A Year Of Fre...
+  [1/2] OpenAI Hardware Leak Confirms Doughnut-Shaped Speaker, While GPT-...
   Skipping - generation failed
 
-  [1/2] BMW X1 LWB India Launch Set For August 21, Could Bring A More Pow...
+  [1/2] Xiaomi Is Bringing Mijia to India: Here’s What the New Home and L...
   Skipping - generation failed
 
-  [1/2] Lenovo launches affordable 240Hz gaming monitor with 27-inch 1500...
+  [1/2] DJI Osmo 360 II design teased ahead of August 13 launch...
   Skipping - generation failed
 
-  [1/2] Timex launches new vintage dress watch with a sleek rectangular d...
+  [1/2] OpenAI’s first hardware is taking shape as a doughnut-shaped spea...
   Skipping - generation failed
 
-  [1/2] Timex launches two Weekender New England Chronograph watches in t...
+  [1/2] Global Redmi 17 5G, Redmi 17 4G launch with 6.9-inch 120Hz displa...
   Skipping - generation failed
 
-  [1/2] Bose’s new QuietComfort Headphones (2nd Gen) bring spatial audio,...
+  [1/2] Xiaomi Mix Fold 5 shows up in images with new HyperOS 4...
   Skipping - generation failed
 
 ============================================================
   CATEGORY: 💻 Software (target: 1 articles)
 ============================================================
 
-  [1/1] OpenAI rolls out a major ChatGPT upgrade, even if you don’t pay f...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 251 words (target 800+), but accepting
-  Generating HF image via SDXL...
-  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  Using local fallback image: /images/blog/agentic_ai_explained.webp
-  GitHub push failed (401): {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-
-  [1/1] ClickFix attack pushes macOS infostealer for crypto theft attacks...
+  [1/1] Metabase SQLi zero-day exploited in customer data-theft attacks...
   Skipping - generation failed
 
-  [1/1] Hedge fund cyberattacks tied to BlackFile-linked UNC6671 extortio...
+  [1/1] Unlimited Technology Systems breach impacts 3.8 million people...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 337 words (target 800+), but accepting
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/agentic_ai_explained.webp
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/1] Levi Strauss & Co. says hackers stole corporate data in cyberatta...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 329 words (target 800+), but accepting
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/agentic_ai_explained.webp
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/1] Real emails, hijacked payments: Two H1 2026 attack chains...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 388 words (target 800+), but accepting
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/agentic_ai_explained.webp
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/1] Free script blocks the hidden Windows tracker Microsoft won't dis...
+  Skipping - generation failed
+
+  [1/1] Stanford, Arc Institute scientists design first AI-generated viru...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 0 words (target 800+), but accepting
+  ❌ REJECTED: Not enough Devanagari characters (0)
+  Retrying with stricter prompt...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -119,7 +186,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   "status": "401"
 }
 
-  [1/1] Swiss government SharePoint breach compromised 200 accounts...
+  [1/1] Kimi K3 AI broke out of its cybersecurity test sandbox, firm says...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -127,7 +194,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 385 words (target 800+), but accepting
+  ⚠️ WARNING: Only 440 words (target 800+), but accepting
   Generating HF image via SDXL...
   HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
   HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
@@ -146,108 +213,8 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 310 words (target 800+), but accepting
-  Generating HF image via SDXL...
-  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  Using local fallback image: /images/blog/agentic_ai_explained.webp
-  GitHub push failed (401): {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-
-  [1/1] Meta's AI model hacked a company, joining OpenAI and Anthropic in...
-  Skipping - generation failed
-
-  [1/1] WebKit flaws expose real IP addresses across iOS, macOS browsers ...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 382 words (target 800+), but accepting
-  Generating HF image via SDXL...
-  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  Using local fallback image: /images/blog/agentic_ai_explained.webp
-  GitHub push failed (401): {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-
-  [1/1] Microsoft's ETW MCP lets Copilot dig through Windows performance ...
-  Skipping - generation failed
-
-  [1/1] Microsoft Links Hotel Wi-Fi Attacks Stealing Microsoft 365 Accoun...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 348 words (target 800+), but accepting
-  Generating HF image via SDXL...
-  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  Using local fallback image: /images/blog/agentic_ai_explained.webp
-  GitHub push failed (401): {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-
-  [1/1] Netflix Enables 4K Streaming in Chrome on Windows 11 With Hardwar...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 335 words (target 800+), but accepting
-  Generating HF image via SDXL...
-  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  Using local fallback image: /images/blog/agentic_ai_explained.webp
-  GitHub push failed (401): {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-
-  [1/1] Google Sets September 4 Removal Date for Google Assistant on Mobi...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 358 words (target 800+), but accepting
-  Generating HF image via SDXL...
-  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  Using local fallback image: /images/blog/agentic_ai_explained.webp
-  GitHub push failed (401): {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-
-  [1/1] Former Rockstar Developer Says GTA 6 Could Be Delayed Again, Pote...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ❌ REJECTED: Too much repetition (14 repeated paragraphs)
+  ⚠️ WARNING: Only 0 words (target 800+), but accepting
+  ❌ REJECTED: Not enough Devanagari characters (0)
   Retrying with stricter prompt...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
@@ -256,6 +223,82 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/agentic_ai_explained.webp
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/1] Uber Commits $10 Billion to Deploy 120,000 Robotaxis Across 15 Ci...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 181 words (target 800+), but accepting
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/agentic_ai_explained.webp
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/1] Google Drive for Desktop Ends Google Photos Backup Sync on August...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 243 words (target 800+), but accepting
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/agentic_ai_explained.webp
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/1] Nintendo Switch 2 Sells Over 23 Million Units in First Year, Outp...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 352 words (target 800+), but accepting
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/agentic_ai_explained.webp
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/1] Rockstar to Debut Extended GTA 6 Look on Netflix First, Drawing F...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 368 words (target 800+), but accepting
   Generating HF image via SDXL...
   HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
   HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
@@ -270,7 +313,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   CATEGORY: ₿ Crypto (target: 2 articles)
 ============================================================
 
-  [1/2] MARA swings to Q2 loss as Bitcoin’s slump masks higher output...
+  [1/2] Donald Trump’s media company to terminate Crypto.com deal...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -278,7 +321,16 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 376 words (target 800+), but accepting
+  ⚠️ WARNING: Only 0 words (target 800+), but accepting
+  ❌ REJECTED: Not enough Devanagari characters (0)
+  Retrying with stricter prompt...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
   Generating HF image via SDXL...
   HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
   HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
@@ -289,7 +341,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   "status": "401"
 }
 
-  [1/2] Crypto market maker Wintermute launches US broker-dealer...
+  [1/2] US Treasury’s OFAC sanctions 2 Iran-linked crypto exchanges...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -297,23 +349,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  [Groq API Error llama-3.1-8b-instant]: 400
-  Trying Groq Model: gemma2-9b-it
-  [Groq API Error gemma2-9b-it]: 400
-  Trying Groq Model: mixtral-8x7b-32768
-  [Groq API Error mixtral-8x7b-32768]: 400
-  Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
-  Skipping - generation failed
-
-  [1/2] Following primary loss, crypto PACs invest $1.5M in 3 US state ra...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 413 words (target 800+), but accepting
+  ⚠️ WARNING: Only 382 words (target 800+), but accepting
   Generating HF image via SDXL...
   HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
   HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
@@ -325,9 +361,6 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
 }
 
   [1/2] Here’s what happened in crypto today...
-  Skipping - generation failed
-
-  [1/2] Senate won't vote on crypto Clarity Act before its summer break...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -335,7 +368,8 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ❌ REJECTED: Too much repetition (3 repeated paragraphs)
+  ⚠️ WARNING: Only 0 words (target 800+), but accepting
+  ❌ REJECTED: Not enough Devanagari characters (0)
   Retrying with stricter prompt...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
@@ -346,7 +380,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Trying Groq Model: llama-3.1-8b-instant
   Generating HF image via SDXL...
   HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -2] Name or service not known)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
   Using local fallback image: /images/blog/ai-crypto-2026.jpg
   GitHub push failed (401): {
   "message": "Bad credentials",
@@ -354,7 +388,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   "status": "401"
 }
 
-  [1/2] Power struggle erupts at Ondo Finance after founder’s death...
+  [1/2] Circle expands USDC to OKX ecosystem with X Layer launch...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -362,7 +396,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 446 words (target 800+), but accepting
+  ⚠️ WARNING: Only 350 words (target 800+), but accepting
   Generating HF image via SDXL...
   HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
   HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
@@ -373,7 +407,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   "status": "401"
 }
 
-  [1/2] Tether expands tokenization business into Saudi Arabia, starting ...
+  [1/2] Trump Media pulls back from crypto, scraps Crypto.com's CRO token...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -384,7 +418,167 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: 'NoneType' object has no attribute 'split'
   Skipping - generation failed
 
-  [1/2] Crypto for Advisors: Europe's crypto rules, U.S. Preview...
+  [1/2] Trump-Backed American Bitcoin director Justin Mateen buys nearly ...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 475 words (target 800+), but accepting
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/ai-crypto-2026.jpg
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/2] U.S. widens Iran crypto crackdown with sanctions on two exchanges...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 332 words (target 800+), but accepting
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/ai-crypto-2026.jpg
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/2] BitMEX sale collapsed as buyers balked at founder ownership and s...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 497 words (target 800+), but accepting
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/ai-crypto-2026.jpg
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/2] A Coldcard Hacker Just Moved $1.94 Million in Stolen Bitcoin for ...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 490 words (target 800+), but accepting
+  ❌ REJECTED: Too much repetition (7 repeated paragraphs)
+  Retrying with stricter prompt...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/ai-crypto-2026.jpg
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/2] The Senate Just Shelved the CLARITY Act, And JPMorgan Says Crypto...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/ai-crypto-2026.jpg
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/2] Bitcoin Price Prediction: A Case for a Bitcoin Surge to USD 76,00...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 281 words (target 800+), but accepting
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/ai-crypto-2026.jpg
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/2] XRP Price Falls 2% as CLARITY Act Vote Slips to September...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 350 words (target 800+), but accepting
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/ai-crypto-2026.jpg
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/2] Trump Media Abandons Crypto Treasury, Prediction Market Ventures...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 445 words (target 800+), but accepting
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/ai-crypto-2026.jpg
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/2] Treasury Sanctions Crypto Exchanges It Says Laundered Millions fo...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -412,7 +606,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   "status": "401"
 }
 
-  [1/2] ChatGPT AI Predicts XRP Could Be Quietly Setting Up a Big Move...
+  [1/2] Bitcoin Payment Service BTCPay Warns Critical Flaw Is Under Activ...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -420,10 +614,10 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 334 words (target 800+), but accepting
+  ⚠️ WARNING: Only 24 words (target 800+), but accepting
   Generating HF image via SDXL...
   HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -2] Name or service not known)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
   Using local fallback image: /images/blog/ai-crypto-2026.jpg
   GitHub push failed (401): {
   "message": "Bad credentials",
@@ -431,23 +625,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   "status": "401"
 }
 
-  [1/2] Google Gemini AI Predicts Most Likely Bitcoin Price by End of 202...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  [Groq API Error llama-3.1-8b-instant]: 400
-  Trying Groq Model: gemma2-9b-it
-  [Groq API Error gemma2-9b-it]: 400
-  Trying Groq Model: mixtral-8x7b-32768
-  [Groq API Error mixtral-8x7b-32768]: 400
-  Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
-  Skipping - generation failed
-
-  [1/2] Coinbase Just Got Full UK Trading License, And Tokenized US Stock...
+  [1/2] Flock Wanted to Turn 350,000 Uber Drivers Into a Nationwide Plate...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -458,118 +636,6 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   ⚠️ WARNING: Only 0 words (target 800+), but accepting
   ❌ REJECTED: Not enough Devanagari characters (0)
   Retrying with stricter prompt...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  Generating HF image via SDXL...
-  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  Using local fallback image: /images/blog/ai-crypto-2026.jpg
-  GitHub push failed (401): {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-
-  [1/2] ELIZAOS Founder Abandons Token After Lawsuit Drains Treasury to Z...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 394 words (target 800+), but accepting
-  Generating HF image via SDXL...
-  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  Using local fallback image: /images/blog/ai-crypto-2026.jpg
-  GitHub push failed (401): {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-
-  [1/2] SEC Bought a Billion Airline Records to Track Travelers—Likely Wi...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 0 words (target 800+), but accepting
-  ❌ REJECTED: Not enough Devanagari characters (0)
-  Retrying with stricter prompt...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  Generating HF image via SDXL...
-  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  Using local fallback image: /images/blog/ai-crypto-2026.jpg
-  GitHub push failed (401): {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-
-  [1/2] Tokyo Tells Trump to Stop Meme-ing Mario...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 287 words (target 800+), but accepting
-  Generating HF image via SDXL...
-  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  Using local fallback image: /images/blog/ai-crypto-2026.jpg
-  GitHub push failed (401): {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-
-  [1/2] Meta Says Its AI Model Escaped and Hacked a Third-Party Company T...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 0 words (target 800+), but accepting
-  ❌ REJECTED: Not enough Devanagari characters (0)
-  Retrying with stricter prompt...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  Generating HF image via SDXL...
-  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  Using local fallback image: /images/blog/ai-crypto-2026.jpg
-  GitHub push failed (401): {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-
-  [1/2] Senators Push CFTC to Ban Wildfire Bets on Prediction Markets...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -591,82 +657,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   CATEGORY: 📱 Gadgets (target: 2 articles)
 ============================================================
 
-  [1/2] Benefits of up to Rs 1.30 lakh on Maruti Grand Vitara in August 2...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  Generating HF image via SDXL...
-  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  Using local fallback image: /images/blog/google_turboquant_tech.webp
-  GitHub push failed (401): {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-
-  [1/2] KTM made-in-India Duke and RC range prices hiked by up to Rs 15,0...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 485 words (target 800+), but accepting
-  Generating HF image via SDXL...
-  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  Using local fallback image: /images/blog/google_turboquant_tech.webp
-  GitHub push failed (401): {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-
-  [1/2] Ather Konarc spotted testing...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 312 words (target 800+), but accepting
-  Generating HF image via SDXL...
-  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  Using local fallback image: /images/blog/google_turboquant_tech.webp
-  GitHub push failed (401): {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-
-  [1/2] Mercedes-AMG reveals entry-spec GT 53 4-door Coupe...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 390 words (target 800+), but accepting
-  Generating HF image via SDXL...
-  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  Using local fallback image: /images/blog/google_turboquant_tech.webp
-  GitHub push failed (401): {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-
-  [1/2] Tesla is racking up speeding tickets, and YOU are on the hook...
+  [1/2] Bajaj Pulsar N160 S, N160 SS launched at Rs 1.34 lakh...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -694,7 +685,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   "status": "401"
 }
 
-  [1/2] NYC is putting 600 new EV charging points right at the curb...
+  [1/2] Royal Enfield Himalayan 440 launch likely in September 2026...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -722,7 +713,17 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   "status": "401"
 }
 
-  [1/2] A 500 MWh Tesla Megapack battery just went live in Texas...
+  [1/2] You’ll only be in the game if you have local assembly in India: A...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 0 words (target 800+), but accepting
+  ❌ REJECTED: Not enough Devanagari characters (0)
+  Retrying with stricter prompt...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -740,7 +741,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   "status": "401"
 }
 
-  [1/2] Another day, another illegal billion-dollar bribe to raise your e...
+  [1/2] Bentley Torcal EV interior teased ahead of September 23 reveal...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -758,26 +759,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   "status": "401"
 }
 
-  [1/2] The Shards review: Ryan Murphy and Bret Easton Ellis are a match ...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 467 words (target 800+), but accepting
-  Generating HF image via SDXL...
-  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
-  Using local fallback image: /images/blog/google_turboquant_tech.webp
-  GitHub push failed (401): {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-
-  [1/2] ‘You should only buy it when it’s on sale’ — the Samsung Galaxy S...
+  [1/2] Kia’s larger electric van caught with less camo ahead of its ‘big...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -788,7 +770,28 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: 'NoneType' object has no attribute 'split'
   Skipping - generation failed
 
-  [1/2] Keen to get Alexa+ but don’t have the necessary hardware? These a...
+  [1/2] Podcast: Ford Fathom cheap pickup EV, Audi A2, Trump on EVs, and ...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/google_turboquant_tech.webp
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/2] Navee UT5 Ultra X superscooter $1,955 low, EGO Nexus power statio...
+  Skipping - generation failed
+
+  [1/2] Here are the top 10 most affordable EVs and hybrids to insure...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -816,7 +819,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   "status": "401"
 }
 
-  [1/2] 'Enemy rags do not remain on Ukrainian soil for long': Ukrainian ...
+  [1/2] Denza claims its latest Z9S model boasts the world’s longest elec...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -824,9 +827,36 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Trying OpenRouter Model: google/gemma-2-9b-it:free
   Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
   Trying Groq Model: llama-3.1-8b-instant
-  ⚠️ WARNING: Only 439 words (target 800+), but accepting
-  ❌ REJECTED: Too much repetition (4 repeated paragraphs)
-  Retrying with stricter prompt...
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/google_turboquant_tech.webp
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/2] Russia is kickstarting its plans to dominate the space race once ...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  ⚠️ WARNING: Only 341 words (target 800+), but accepting
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/google_turboquant_tech.webp
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+
+  [1/2] Pentagon signs $500 million deal for unmanned counter-drone missi...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
   [Gemini API Error gemini-1.5-pro] 404
@@ -841,6 +871,24 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   [Groq API Error mixtral-8x7b-32768]: 400
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
+
+  [1/2] Quordle hints and answers for Saturday, August 8 (game #1657)...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini Rate Limit 429] gemini-2.0-flash - Sleeping 30s...
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  Generating HF image via SDXL...
+  HF attempt 1: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  HF attempt 2: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/stabilityai/stable-diffusion-xl-base-1.0 (Caused by NameResolutionError("HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno -5] No address associated with hostname)"))
+  Using local fallback image: /images/blog/google_turboquant_tech.webp
+  GitHub push failed (401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
   ✗ History save failed: 401
 
 ============================================================
