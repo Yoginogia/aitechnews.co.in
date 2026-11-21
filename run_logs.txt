@@ -1,6 +1,6 @@
 ============================================================
 === AITechNews Publisher v4.0 - ULTRA UPDATE ===
-Run time: 2026-11-20 04:50 UTC
+Run time: 2026-11-21 04:44 UTC
 Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
 ============================================================
 
@@ -11,16 +11,16 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   CATEGORY: 🤖 AI (target: 5 articles)
 ============================================================
 
-  [1/5] Apple may be developing its own AI agent that runs your Mac...
+  [1/5] Daniel Ek backs AI researcher’s fusion power startup. Here’s what...
   Skipping - generation failed
 
-  [1/5] Anthropic’s 7 founders cashed out nearly $2B in record-breaking I...
+  [1/5] AI claimed a solution to the 167-year-old Riemann hypothesis — an...
   Skipping - generation failed
 
-  [1/5] Meta’s new Muse Charm device may cost $300...
+  [1/5] Chips can survive the space environment — can their financing?...
   Skipping - generation failed
 
-  [1/5] These tech outages are giving Y2K, AI agent style...
+  [1/5] The fallout from Nvidia’s Jensen Huang scandal continues...
   Skipping - generation failed
 
   [1/5] Introducing Tool Retrieval in the Gemini API...
@@ -35,66 +35,115 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   [1/5] Put Gemini to work for you...
   Skipping - generation failed
 
+  [1/5] Combatting adversarial distillation...
+  Skipping - generation failed
+
+  [1/5] Hebbia sees improvements in financial research with GPT-6 Astra...
+  Skipping - generation failed
+
+  [1/5] Can AI help scientists identify promising drug candidates?...
+  Skipping - generation failed
+
   [1/5] How OpenAI’s Performance Factory keeps ChatGPT fast...
   Skipping - generation failed
 
-  [1/5] Deploying Daybreak Red...
+  [1/5] Goa Wants to Train 50,000 Graduates in AI Skills...
   Skipping - generation failed
 
-  [1/5] See PR scans in action...
+  [1/5] Forget Organic Growth, AI is Forcing Mid-Cap Indian IT to Reinven...
   Skipping - generation failed
 
-  [1/5] Explore the Codex Security Plugin...
+  [1/5] Logic Pursuits Certified as Best Firm for Data Engineers...
   Skipping - generation failed
 
-  [1/5] Cyient Semiconductors Secures $10 Mn Investment From GlobalFoundr...
-  Skipping - generation failed
-
-  [1/5] Karnataka Sees ₹1,050 Cr Deeptech Investment From 24 VCs...
-  Skipping - generation failed
-
-  [1/5] Infosys Expands AI Footprint in Japan With Telecom JV...
-  Skipping - generation failed
-
-  [1/5] Karnataka Hosts Nearly Half of India's AI CoEs: Zinnov-KDEM Repor...
+  [1/5] Why Banks Are Betting on AI Orchestration Over Autonomy...
   Skipping - generation failed
 
 ============================================================
   CATEGORY: 🛍️ Deals (target: 2 articles)
 ============================================================
 
-  [1/2] Best Camera for Photography and Video: A Practical Guide to Picki...
+  [1/2] GTA VI: Hidden Mechanics, Secret Tricks & 20 Lesser-Known Tips An...
   Skipping - generation failed
 
-  [1/2] Vivo Watch GT 2 India Price Tipped Under ₹15,000 Ahead Of Novembe...
+  [1/2] Honda Rebel 500 Gets Cheaper: Made-in-India Cruiser Launched At ₹...
   Skipping - generation failed
 
-  [1/2] Could India Get Honda-Badged Tata Cars? Here’s What The Reported ...
+  [1/2] Xiaomi 18 Pro India Price Tipped at ₹1.6 to ₹1.7 Lakh: Dual 200MP...
+  [Gemini API Error gemini-2.5-flash] 503
+  [Gemini API Error gemini-2.0-flash] 404
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  [Groq API Error llama-3.1-8b-instant]: 404
+  Trying Groq Model: gemma2-9b-it
+  [Groq API Error gemma2-9b-it]: 400
+  Trying Groq Model: mixtral-8x7b-32768
+  [Groq API Error mixtral-8x7b-32768]: 400
+  Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] GTA VI: 5 Things Players Love and 5 Complaints They Have With Roc...
+  [1/2] Lava Smart 4 Pro Launched In India For ₹10,999:  Check Battery, S...
+  [Gemini API Error gemini-2.5-flash] 503
+  [Gemini API Error gemini-2.0-flash] 404
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  [Groq API Error llama-3.1-8b-instant]: 404
+  Trying Groq Model: gemma2-9b-it
+  [Groq API Error gemma2-9b-it]: 400
+  Trying Groq Model: mixtral-8x7b-32768
+  [Groq API Error mixtral-8x7b-32768]: 400
+  Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] Xiaomi 18 reservations begin, here’s what to expect...
+  [1/2] Jackery’s new portable power station fits a 96Wh battery into a t...
   Skipping - generation failed
 
-  [1/2] Xiaomi puts an 8,500rpm motor and a 60-day battery in its new sha...
+  [1/2] Nothing’s first AI gadget finally has a launch date...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini API Error gemini-2.0-flash] 404
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  [Groq API Error llama-3.1-8b-instant]: 404
+  Trying Groq Model: gemma2-9b-it
+  [Groq API Error gemma2-9b-it]: 400
+  Trying Groq Model: mixtral-8x7b-32768
+  [Groq API Error mixtral-8x7b-32768]: 400
+  Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] Ugreen announces first 60W AVS display charger for iPhone 18 Pro ...
+  [1/2] Upcoming Phones With 9,000mAh or Larger Batteries...
   Skipping - generation failed
 
-  [1/2] Casio launches G-Shock GM2110HDN-8A with Hidden NY, inspired by N...
+  [1/2] Motorola publishes a vague Android 17 rollout timeline for 20 pho...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini API Error gemini-2.0-flash] 404
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  [Groq API Error llama-3.1-8b-instant]: 404
+  Trying Groq Model: gemma2-9b-it
+  [Groq API Error gemma2-9b-it]: 400
+  Trying Groq Model: mixtral-8x7b-32768
+  [Groq API Error mixtral-8x7b-32768]: 400
+  Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
 ============================================================
   CATEGORY: 💻 Software (target: 1 articles)
 ============================================================
 
-  [1/1] VMware patches vCenter zero-day exploited in attacks since Septem...
-  Skipping - generation failed
-
-  [1/1] Hackers steal data of 1.6 million SBC Medical Group customers...
+  [1/1] Bell Canada says 'agentic' hacker stole enterprise customer data...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -110,7 +159,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/1] ASUS warns of critical hard-coded key flaw in Control Center Expr...
+  [1/1] Hackers use autonomous AI tool Cairn to find zero-day, take over ...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -126,10 +175,10 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/1] Transport for London breach exposes 265,000 Oyster card users' da...
+  [1/1] Vendor data breach exposes Chase, Visa, Mastercard customer info...
   Skipping - generation failed
 
-  [1/1] Copilot will scan Windows 11 PCs for faults, but repairs stay wit...
+  [1/1] Still tracking company passwords in spreadsheets? You’re flying b...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -145,10 +194,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/1] OpenAI cuts GPT-6.2 Astra API prices 20% as Sol takes on everyday...
-  Skipping - generation failed
-
-  [1/1] Java4Shell bug in OpenJDK’s Base64 decoder exposes Jira and Jenki...
+  [1/1] UK tribunal forces Home Office to confirm secret Apple encryption...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -164,7 +210,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/1] Microsoft announces deprecation of Windows PowerShell 5.1, promot...
+  [1/1] Apple plans its own Mac AI agent as macOS 27.3 adds hurdles for r...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -180,7 +226,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/1] GTA VI Launches at 30 FPS on Every Console, and Rockstar Says the...
+  [1/1] Anthropic closes Nasdaq debut up 17% as Wall Street indexes tumbl...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -196,7 +242,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/1] Microsoft Is Retiring To Do in June 2027, and Personal Users Get ...
+  [1/1] Quad9 will pull its free DNS resolver out of France after beIN co...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -212,7 +258,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/1] Anthropic Starts Trading on Nasdaq After the Largest IPO in Histo...
+  [1/1] Valve Says Rising Memory Costs Leave Steam Machine Prices Uncerta...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -228,14 +274,46 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/1] Microsoft Confirms Windows 11 Hotpatch Breaks App Installs and Sh...
+  [1/1] UK Court Forces Government to Confirm It Ordered Apple to Open iC...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini API Error gemini-2.0-flash] 404
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  [Groq API Error llama-3.1-8b-instant]: 404
+  Trying Groq Model: gemma2-9b-it
+  [Groq API Error gemma2-9b-it]: 400
+  Trying Groq Model: mixtral-8x7b-32768
+  [Groq API Error mixtral-8x7b-32768]: 400
+  Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
+  Skipping - generation failed
+
+  [1/1] Google Play Will Block App Updates That Don't Work Properly on Fo...
+  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
+  [Gemini API Error gemini-2.0-flash] 404
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  [Groq API Error llama-3.1-8b-instant]: 404
+  Trying Groq Model: gemma2-9b-it
+  [Groq API Error gemma2-9b-it]: 400
+  Trying Groq Model: mixtral-8x7b-32768
+  [Groq API Error mixtral-8x7b-32768]: 400
+  Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
+  Skipping - generation failed
+
+  [1/1] Microsoft Starts Upgrading Windows 11 PCs to Version 26H2 Automat...
   Skipping - generation failed
 
 ============================================================
   CATEGORY: ₿ Crypto (target: 2 articles)
 ============================================================
 
-  [1/2] Institutions pile back into US Bitcoin ETFs in Q3 after selling s...
+  [1/2] Wrapped Monero token crashes 99.8% amid suspected $13.5M exploit...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -251,7 +329,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] Ledger CTO Charles Guillemet to leave after nine years at company...
+  [1/2] Sky Protocol sees $2 billion in stablecoin withdrawals, disputes ...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -267,13 +345,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] Binance’s $6.5B freeze order, Hong Kong ‘suspicious’ of HYPE: Asi...
-  Skipping - generation failed
-
-  [1/2] MoonPay seeks US bank charter for stablecoin, custody services...
-  Skipping - generation failed
-
-  [1/2] Ethereum’s next big upgrade is pushed into 2027 by apps it would ...
+  [1/2] Bitcoin falls below $60K for first time since July amid broader m...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -289,7 +361,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] VanEck drops Gemini as custodian of its bitcoin, ether and SOL ET...
+  [1/2] US Senate advances prediction market restrictions with DEATH BETS...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -305,7 +377,39 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] Bitcoin hits four-month low after Anthropic's IPO as tech stocks ...
+  [1/2] Bitcoin tanks below $57,000 for the first time in two years, and ...
+  [Gemini API Error gemini-2.5-flash] 503
+  [Gemini API Error gemini-2.0-flash] 404
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  [Groq API Error llama-3.1-8b-instant]: 404
+  Trying Groq Model: gemma2-9b-it
+  [Groq API Error gemma2-9b-it]: 400
+  Trying Groq Model: mixtral-8x7b-32768
+  [Groq API Error mixtral-8x7b-32768]: 400
+  Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
+  Skipping - generation failed
+
+  [1/2] Kalshi races to get ahead of New York order that could shut down ...
+  [Gemini API Error gemini-2.5-flash] 503
+  [Gemini API Error gemini-2.0-flash] 404
+  [Gemini API Error gemini-1.5-pro] 404
+  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
+  Trying OpenRouter Model: google/gemma-2-9b-it:free
+  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
+  Trying Groq Model: llama-3.1-8b-instant
+  [Groq API Error llama-3.1-8b-instant]: 404
+  Trying Groq Model: gemma2-9b-it
+  [Groq API Error gemma2-9b-it]: 400
+  Trying Groq Model: mixtral-8x7b-32768
+  [Groq API Error mixtral-8x7b-32768]: 400
+  Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
+  Skipping - generation failed
+
+  [1/2] Fairmint plans tokenized stock venue on Canton, Ethereum under SE...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -321,7 +425,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] Sky's USDS stablecoin shrinks 35% as $1.5 billion exits reserves ...
+  [1/2] Bitcoin plunges below $59,000 as rush to cash puts new bear marke...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -337,7 +441,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] Gemini AI Predicts Which Privacy Coin Goes to the Moon in 2027? X...
+  [1/2] Mark Zuckerberg’s Meta AI Predicts the Flippening: How Does ADA F...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -353,7 +457,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] XRP Has an Institutional Edge, But Garlinghouse Believes Wall Str...
+  [1/2] XRP Price Prediction: $1 Wall Breaks, What’s Next?...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -369,7 +473,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] Rene Haas to Take Over Nvidia? What Will Happen to Crypto?...
+  [1/2] Bitcoin Price Crashes Below $62K: What Should You Do?...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -385,7 +489,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] Stablecoin Market Loses Billions: Where Is Crypto’s Liquidity Goi...
+  [1/2] Hyperliquid Monero Crashes? Wagyu-Linked XMR1 Collapses, $13.2M F...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -401,7 +505,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] Citi Says Customers Are Responsible When AI Banking Agents Go Rog...
+  [1/2] Claude Claims Historic Math Breakthrough One Day After Anthropic ...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -417,7 +521,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] Nvidia, AMD, Micron Sink as Anthropic Closes 17% Above IPO Price...
+  [1/2] Nvidia Shares Sink to 52-Week Low After Report SEC Is Probing Acc...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -433,23 +537,10 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] Meet SHRINCS: Bitcoin's Emerging Frontrunner for a Post-Quantum S...
-  [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
-  [Gemini API Error gemini-2.0-flash] 404
-  [Gemini API Error gemini-1.5-pro] 404
-  Trying OpenRouter Model: meta-llama/llama-3-8b-instruct:free
-  Trying OpenRouter Model: google/gemma-2-9b-it:free
-  Trying OpenRouter Model: mistralai/mistral-7b-instruct:free
-  Trying Groq Model: llama-3.1-8b-instant
-  [Groq API Error llama-3.1-8b-instant]: 404
-  Trying Groq Model: gemma2-9b-it
-  [Groq API Error gemma2-9b-it]: 400
-  Trying Groq Model: mixtral-8x7b-32768
-  [Groq API Error mixtral-8x7b-32768]: 400
-  Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
+  [1/2] SBF’s 'The Altruists' Plot Twist: FTX’s Anthropic Shares Would Be...
   Skipping - generation failed
 
-  [1/2] Hackers Leak Visa, Mastercard and JPMorgan Customer Data...
+  [1/2] Cathie Wood Bets $91M on Anthropic IPO While Paring Crypto Exposu...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -469,7 +560,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   CATEGORY: 📱 Gadgets (target: 2 articles)
 ============================================================
 
-  [1/2] GM’s V2G pilot wants to pay California drivers for power from par...
+  [1/2] BYD offers a first look at its new flagship people mover...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -485,7 +576,10 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] NSSL keeps growing its electric terminal truck fleet, with no pla...
+  [1/2] This 500 kWh energy storage system runs on retired EV batteries...
+  Skipping - generation failed
+
+  [1/2] Kia, Lucid, and Volkswagen are slashing EV prices by $10,000+ for...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -501,7 +595,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] Alpitronic’s new SC plant to build 400 kW and 1 MW fast chargers...
+  [1/2] Podcast: Tesla’s ‘personal’ Cybercab, Ford’s LFP for Fathom, Apte...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -517,7 +611,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] BYD’s new Han EV spotted without camo, showing off its sleek fast...
+  [1/2] How to watch Australia vs England T20i Series 2026: Live Streams,...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -533,7 +627,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] How to watch Percy Jackson and the Olympians season 3 online from...
+  [1/2] Japanese supercomputer hit by suspected cyberattack — Fugaku faci...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -549,7 +643,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] How to watch Yellowjackets season 4 online – stream final episode...
+  [1/2] Smeg MOC02 Combi Microwave review: chic, compact, and packed with...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -565,7 +659,7 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
   Skipping - generation failed
 
-  [1/2] 'Public lands belong in public hands': New bill looks to ban new ...
+  [1/2] Palmer Luckey wants to build a floating island that can last 1,00...
   [Gemini Rate Limit 429] gemini-2.5-flash - Sleeping 30s...
   [Gemini API Error gemini-2.0-flash] 404
   [Gemini API Error gemini-1.5-pro] 404
@@ -579,9 +673,6 @@ Fixes: Deduplication + Casual Hinglish + Web Stories + Amazon Deals
   Trying Groq Model: mixtral-8x7b-32768
   [Groq API Error mixtral-8x7b-32768]: 400
   Generation error: All AI models (Gemini, OpenRouter, Groq) failed or rate-limited.
-  Skipping - generation failed
-
-  [1/2] Logitech Pebble Mouse 2 review: the perfect travel mouse but not ...
   Skipping - generation failed
   ✗ History save failed: 401
 
